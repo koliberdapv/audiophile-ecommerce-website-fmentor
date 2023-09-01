@@ -1,35 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import {
+	ColorButton,
+	LinkButton,
+	MonochromeButton,
+} from './components/buttons/';
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+	return (
+		<div className="flex column">
+			<h1>Lorem, ipsum.</h1>
+			<h2>Lorem, ipsum.</h2>
+			<h3>Lorem, ipsum.</h3>
+			<h4>Lorem, ipsum.</h4>
+			<h5>Lorem, ipsum.</h5>
+			<h6>Lorem, ipsum.</h6>
+			<p className="overline">Lorem, ipsum.</p>
+			<p className="subtitle">Lorem, ipsum.</p>
+			<p>Lorem, ipsum.</p>
+			<ColorButton />
+			<MonochromeButton />
+			<LinkButton />
+		</div>
+	);
 }
 
-export default App
+export default App;
