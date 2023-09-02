@@ -3,6 +3,9 @@ import {
 	LinkButton,
 	MonochromeButton,
 } from './components/buttons/';
+import Counter from './components/buttons/Counter';
+import FormElement from './components/form/FormElement';
+import FormElementSelect from './components/form/FormElementSelect';
 function App() {
 	return (
 		<div className="flex column">
@@ -18,6 +21,9 @@ function App() {
 			<ColorButton />
 			<MonochromeButton />
 			<LinkButton />
+			<FormElement />
+			<FormElementSelect />
+			<Counter />
 		</div>
 	);
 }
