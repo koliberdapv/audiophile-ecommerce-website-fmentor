@@ -1,30 +1,52 @@
-import {
-	ColorButton,
-	LinkButton,
-	MonochromeButton,
-} from './components/buttons/';
-import Counter from './components/buttons/Counter';
-import FormElement from './components/form/FormElement';
-import FormElementSelect from './components/form/FormElementSelect';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import SharedLayout from './components/ui/SharedLayout';
+import Home from './pages/Home/Home';
+import Headphones from './pages/Headphones/Headphones';
+import Earphones from './pages/Earphones/Earphones';
+import Speakers from './pages/Speakers/Speakers';
+import Product from './pages/Product/Product';
+import Checkout from './pages/Checkout/Checkout';
+import Error from './pages/Error/Error';
+
 function App() {
 	return (
-		<div className="flex column">
-			<h1>Lorem, ipsum.</h1>
-			<h2>Lorem, ipsum.</h2>
-			<h3>Lorem, ipsum.</h3>
-			<h4>Lorem, ipsum.</h4>
-			<h5>Lorem, ipsum.</h5>
-			<h6>Lorem, ipsum.</h6>
-			<p className="overline">Lorem, ipsum.</p>
-			<p className="subtitle">Lorem, ipsum.</p>
-			<p>Lorem, ipsum.</p>
-			<ColorButton />
-			<MonochromeButton />
-			<LinkButton />
-			<FormElement />
-			<FormElementSelect />
-			<Counter />
-		</div>
+		<BrowserRouter>
+			<Routes>
+				<Route
+					path="/"
+					element={<SharedLayout />}
+				>
+					<Route
+						index
+						element={<Home />}
+					/>
+					<Route
+						path="/category/headphones"
+						element={<Headphones />}
+					/>
+					<Route
+						path="/category/speakers"
+						element={<Speakers />}
+					/>
+					<Route
+						path="/category/earphones"
+						element={<Earphones />}
+					/>
+					<Route
+						path="/product/:id"
+						element={<Product />}
+					/>
+					<Route
+						path="/checkout"
+						element={<Checkout />}
+					/>
+				</Route>
+				<Route
+					path="*"
+					element={<Error />}
+				/>
+			</Routes>
+		</BrowserRouter>
 	);
 }
 
