@@ -81,6 +81,7 @@ html {
 body {
 	color: var(--clr-full-black);
 	font-family: var(--bodyFont);
+	background-color: black;
 }
 p {
 	font-size: 0.9375rem;
@@ -177,9 +178,9 @@ ul {
 	object-fit: cover;
 }
 .container {
-	width: 90vw;
-	margin-inline: auto;
-	max-width: 1350px;
+	/* width: 90vw; */
+	/* margin-inline: auto; */
+	/* max-width: 1350px; */
 }
 .flex {
 	display: flex;

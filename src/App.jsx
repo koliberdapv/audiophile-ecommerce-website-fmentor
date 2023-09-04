@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import SharedLayout from './components/ui/SharedLayout';
+import { SharedLayout } from './components/ui/';
 import Home from './pages/Home/Home';
 import Headphones from './pages/Headphones/Headphones';
 import Earphones from './pages/Earphones/Earphones';
