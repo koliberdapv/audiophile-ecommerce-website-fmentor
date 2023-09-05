@@ -1,8 +1,7 @@
-import logo from '../../assets/shared/mobile/logo.svg';
 import cart from '../../assets/shared/mobile/cart.svg';
 import hamburger from '../../assets/shared/mobile/hamburger.svg';
 import Wrapper from './Wrappers/NavbarWrapper';
-import Links from './Links';
+import { Links, Logo } from './';
 const Navbar = () => {
 	return (
 		<Wrapper>
@@ -16,12 +15,7 @@ const Navbar = () => {
 							/>
 						</figure>
 					</button>
-					<figure className="logo | grid center">
-						<img
-							src={logo}
-							alt="audiophile"
-						/>
-					</figure>
+					<Logo />
 					<Links mobile={true} />
 					<button className="cart-btn">
 						<figure className="grid center">

@@ -81,7 +81,6 @@ html {
 body {
 	color: var(--clr-full-black);
 	font-family: var(--bodyFont);
-	background-color: black;
 }
 p {
 	font-size: 0.9375rem;
@@ -168,7 +167,13 @@ button {
 button:disabled {
 	cursor: not-allowed;
 }
-
+a {
+	color: var(--clr-white);
+	transition: all 200ms ease-in;
+}
+a:hover {
+	color: var(--clr-dark-orange);
+}
 ul {
 	list-style-type: none;
 }

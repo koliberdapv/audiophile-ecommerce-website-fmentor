@@ -1,11 +1,15 @@
 import { Link } from 'react-router-dom';
 import Wrapper from './Wrappers/LinksWrapper';
 
-const Links = ({ mobile }) => {
+const Links = ({ mobile, column }) => {
 	return (
 		<Wrapper className={mobile && 'mobile-width'}>
 			<div>
-				<ul className="links-container flex">
+				<ul
+					className={
+						column ? 'links-container flex flex-column' : 'links-container flex'
+					}
+				>
 					<li>
 						<Link to="/">
 							<p className="subtitle">home</p>

@@ -1,8 +1,8 @@
-import { styled } from 'styled-components';
+import styled from 'styled-components';
 
 const Wrapper = styled.div`
 	.links-container {
-		gap: 2.125rem;
+		gap: 1rem;
 	}
 	/* a {
 		color: var(--clr-white);
@@ -11,8 +11,5 @@ const Wrapper = styled.div`
 	a:hover {
 		color: var(--clr-dark-orange);
 	} */
-	.flex-column {
-		flex-direction: column;
-	}
 `;
 export default Wrapper;
