@@ -3,9 +3,6 @@ import { styled } from 'styled-components';
 const Wrapper = styled.nav`
 	background-color: var(--clr-black-1);
 	overflow: hidden;
-	.width-controller {
-		padding: 0 1rem;
-	}
 	.nav-container {
 		padding: 1.5rem 0;
 		position: relative;
@@ -29,14 +26,9 @@ const Wrapper = styled.nav`
 		display: none;
 	}
 	@media screen and (width > 767px) {
-		.width-controller {
-			padding: 0 2rem;
-			max-width: calc(1110px + 4rem);
-			margin-inline: auto;
-		}
 		.nav-container {
 			gap: 2rem;
-			padding: 1.5rem 0;
+			justify-content: left;
 		}
 		.logo {
 			margin-right: auto;

@@ -1,15 +1,8 @@
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
+const Wrapper = styled.article`
 	.links-container {
 		gap: 1rem;
 	}
-	/* a {
-		color: var(--clr-white);
-		transition: all 200ms ease-in;
-	}
-	a:hover {
-		color: var(--clr-dark-orange);
-	} */
 `;
 export default Wrapper;

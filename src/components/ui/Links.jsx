@@ -21,13 +21,13 @@ const Links = ({ mobile, column }) => {
 						</Link>
 					</li>
 					<li>
-						<Link to="/category/earphones">
-							<p className="subtitle">earphones</p>
+						<Link to="/category/speakers">
+							<p className="subtitle">speakers</p>
 						</Link>
 					</li>
 					<li>
-						<Link to="/category/speakers">
-							<p className="subtitle">speakers</p>
+						<Link to="/category/earphones">
+							<p className="subtitle">earphones</p>
 						</Link>
 					</li>
 				</ul>
