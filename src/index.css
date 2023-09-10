@@ -98,6 +98,7 @@ h6,
 	font-family: var(--bodyFont);
 	text-transform: uppercase;
 	font-weight: var(--fw-700);
+	margin: 0;
 }
 
 h1 {
@@ -181,6 +182,7 @@ ul {
 .img {
 	display: block;
 	object-fit: cover;
+	object-fit: contain;
 }
 .flex {
 	display: flex;
@@ -214,6 +216,7 @@ ul {
 	max-width: 1174px;
 	margin-inline: auto;
 	width: calc(100% - 3rem);
+	background-color: transparent;
 }
 @media screen and (width > 767px) {
 	.width-controller {

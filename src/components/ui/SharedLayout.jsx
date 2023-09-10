@@ -4,10 +4,7 @@ const SharedLayout = () => {
 	return (
 		<>
 			<Navbar />
-			<h1>Shared layout</h1>
-			<div>
-				<Outlet />
-			</div>
+			<Outlet />
 			<Footer />
 		</>
 	);
