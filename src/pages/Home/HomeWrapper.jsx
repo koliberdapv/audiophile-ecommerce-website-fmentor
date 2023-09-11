@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.section`
-	color: var(--clr-white);
+	/* color: var(--clr-white);
 	background-color: var(--clr-black-1);
 	overflow: hidden;
 	position: relative;
@@ -36,6 +36,6 @@ const Wrapper = styled.section`
 	}
 	.overline {
 		opacity: 0.5;
-	}
+	} */
 `;
 export default Wrapper;
