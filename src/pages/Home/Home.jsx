@@ -1,10 +1,11 @@
 import Wrapper from './HomeWrapper';
-import { Hero } from '../../components/ui/';
+import { Categories, Hero } from '../../components/ui/';
 
 const Home = () => {
 	return (
 		<Wrapper>
 			<Hero />
+			<Categories />
 		</Wrapper>
 	);
 };

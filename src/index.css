@@ -175,6 +175,9 @@ a {
 a:hover {
 	color: var(--clr-dark-orange);
 }
+span {
+	transition: all 200ms ease-in;
+}
 ul {
 	list-style-type: none;
 }

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const Wrapper = styled.main`
 	color: var(--clr-white);
 	background-color: var(--clr-black-1);
+	background-color: transparent;
 	overflow: hidden;
 	position: relative;
 	.home-container {
