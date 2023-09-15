@@ -26,6 +26,7 @@ html {
 	--clr-invalid: hsl(0, 65%, 49%);
 	--clr-form-border: hsl(0, 0%, 81%);
 	--clr-counter-bg: hsl(0, 0%, 95%);
+	--clr-gray: hsl(0, 0%, 30%);
 
 	/* fonts  */
 	--bodyFont: 'Manrope', sans-serif;
@@ -182,10 +183,10 @@ ul {
 	list-style-type: none;
 }
 
-.img {
+img {
+	width: 100%;
 	display: block;
 	object-fit: cover;
-	object-fit: contain;
 }
 .flex {
 	display: flex;
@@ -232,5 +233,27 @@ ul {
 @media screen and (width > 767px) {
 	.flex-column {
 		flex-direction: row;
+	}
+}
+[data-resolution='tablet'] {
+	display: none;
+}
+[data-resolution='desktop'] {
+	display: none;
+}
+@media screen and (width > 600px) {
+	[data-resolution='mobile'] {
+		display: none;
+	}
+	[data-resolution='tablet'] {
+		display: block;
+	}
+}
+@media screen and (width > 1200px) {
+	[data-resolution='tablet'] {
+		display: none;
+	}
+	[data-resolution='desktop'] {
+		display: block;
 	}
 }

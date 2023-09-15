@@ -3,7 +3,6 @@ import arrow_right from '../../assets/shared/desktop/icon-arrow-right.svg';
 import { Link } from 'react-router-dom';
 
 const LinkButton = ({ direction }) => {
-	console.log(direction);
 	return (
 		<Wrapper>
 			<Link

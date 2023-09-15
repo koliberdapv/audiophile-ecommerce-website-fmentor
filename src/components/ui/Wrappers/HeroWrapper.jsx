@@ -40,19 +40,7 @@ const Wrapper = styled.main`
 	.overline {
 		opacity: 0.5;
 	}
-	[data-resolution='tablet'] {
-		display: none;
-	}
-	[data-resolution='desktop'] {
-		display: none;
-	}
 	@media screen and (width > 600px) {
-		[data-resolution='mobile'] {
-			display: none;
-		}
-		[data-resolution='tablet'] {
-			display: block;
-		}
 		.background-img {
 			top: 48%;
 		}
@@ -73,12 +61,6 @@ const Wrapper = styled.main`
 		}
 	}
 	@media screen and (width > 1200px) {
-		[data-resolution='tablet'] {
-			display: none;
-		}
-		[data-resolution='desktop'] {
-			display: block;
-		}
 		.background-img {
 			top: 50%;
 		}
