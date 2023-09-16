@@ -18,6 +18,7 @@ const Wrapper = styled.div`
 	width: fit-content;
 	.link {
 		background-color: var(--clr-white);
+		background-color: transparent;
 		color: var(--clr-full-black);
 		border: 1px solid var(--clr-full-black);
 		padding: 1em 2em;

@@ -1,22 +1,28 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const ColorButton = () => {
+const ColorButton = ({ direction }) => {
 	return (
 		<Wrapper>
-			<button>
+			<Link
+				className="link | grid"
+				to={direction}
+			>
 				<p className="subtitle">see product</p>
-			</button>
+			</Link>
 		</Wrapper>
 	);
 };
 
 const Wrapper = styled.div`
-	button {
+	width: fit-content;
+	margin-inline: auto;
+	.link {
 		background-color: var(--clr-dark-orange);
 		color: var(--clr-white);
 		padding: 1em 2em;
 	}
-	button:hover {
+	.link:hover {
 		background-color: var(--clr-light-orange);
 	}
 `;

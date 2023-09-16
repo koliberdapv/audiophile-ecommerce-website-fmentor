@@ -10,6 +10,7 @@ const Wrapper = styled.main`
 		isolation: isolate;
 		text-align: center;
 		padding: 8.5rem 0;
+		justify-content: center;
 	}
 	h1 {
 		font-size: 2.25rem;

@@ -217,12 +217,12 @@ img {
 	visibility: hidden;
 }
 .width-controller {
-	max-width: 1174px;
+	max-width: 1100px;
 	margin-inline: auto;
 	width: calc(100% - 3rem);
 	background-color: transparent;
 }
-@media screen and (width > 767px) {
+@media screen and (width > 730px) {
 	.width-controller {
 		width: calc(100% - 5rem);
 	}

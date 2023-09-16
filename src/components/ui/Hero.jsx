@@ -33,7 +33,7 @@ const Hero = () => {
 						Experience natural, lifelike audio and exceptional build quality
 						made for the passionate music enthusiast.
 					</p>
-					<ColorButton />
+					<ColorButton direction="/product/XX99" />
 				</div>
 			</div>
 		</Wrapper>
