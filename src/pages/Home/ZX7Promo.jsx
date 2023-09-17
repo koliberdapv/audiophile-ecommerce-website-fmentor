@@ -1,6 +1,7 @@
 import Wrapper from './Wrappers/ZX7PromoWrapper';
 import speaker_img_mobile from '../../assets/home/mobile/image-speaker-zx7.jpg';
 import speaker_img_tablet from '../../assets/home/tablet/image-speaker-zx7.jpg';
+// import speaker_img_tablet from '../../assets/home/tablet/12.png';
 import speaker_img_desktop from '../../assets/home/desktop/image-speaker-zx7.jpg';
 import { MonochromeButton } from '../../components/buttons';
 

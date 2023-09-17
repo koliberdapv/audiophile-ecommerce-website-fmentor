@@ -16,7 +16,6 @@ const ColorButton = ({ direction }) => {
 
 const Wrapper = styled.div`
 	width: fit-content;
-	margin-inline: auto;
 	.link {
 		background-color: var(--clr-dark-orange);
 		color: var(--clr-white);

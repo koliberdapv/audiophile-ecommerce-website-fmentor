@@ -31,7 +31,7 @@ const Wrapper = styled.section`
 	}
 	.category-container {
 		gap: 1.5rem;
-		margin: 3rem 0;
+		/* margin: 3rem 0; */
 		grid-template-columns: 100%;
 	}
 	.category {
@@ -52,13 +52,18 @@ const Wrapper = styled.section`
 	.earphones-img {
 		scale: 1.5;
 	}
-	@media screen and (width > 768px) {
+	/* @media screen and (width > 767px) { */
+	@media screen and (width > 600px) {
 		.category-container {
 			gap: 0.625rem;
 			grid-template-columns: repeat(3, 1fr);
 		}
+		.earphones-img {
+			transform: translateY(-17.5%);
+		}
 	}
-	@media screen and (width > 1200px) {
+	/* @media screen and (width > 1200px) { */
+	@media screen and (width > 1000px) {
 		.title {
 			font-size: var(--fs-400);
 			letter-spacing: var(--spacing-h6);
@@ -68,9 +73,6 @@ const Wrapper = styled.section`
 		}
 		.category {
 			grid-template-columns: auto;
-		}
-		.earphones-img {
-			transform: translateY(-17.5%);
 		}
 		.category-container {
 			gap: 1.875rem;

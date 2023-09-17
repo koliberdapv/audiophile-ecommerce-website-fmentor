@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 const Wrapper = styled.article`
-	margin: 7.5rem 0 1rem;
+	/* margin: 7.5rem 0 1rem; */
 	color: var(--clr-white);
 	.content-container {
 		background-color: var(--clr-dark-orange);
@@ -33,7 +33,8 @@ const Wrapper = styled.article`
 		opacity: 0.75;
 		max-width: 349px;
 	}
-	@media screen and (width > 768px) {
+	/* @media screen and (width > 768px) { */
+	@media screen and (width > 600px) {
 		.content-container {
 			gap: 4rem;
 		}
@@ -52,8 +53,8 @@ const Wrapper = styled.article`
 			margin-bottom: 1rem;
 		}
 	}
-	@media screen and (width > 1200px) {
-		margin: 10.5rem 0 1rem;
+	@media screen and (width > 1000px) {
+		/* margin: 10.5rem 0 1rem; */
 		.content-container {
 			grid-template-columns: auto auto;
 			padding: 0;

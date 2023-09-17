@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 const Wrapper = styled.article`
-	margin-bottom: 1rem;
 	.content-container {
 		border-radius: var(--br-form);
 		overflow: hidden;
@@ -21,15 +20,16 @@ const Wrapper = styled.article`
 		}
 	}
 	@media screen and (width > 770px) {
+		/* @media screen and (width > 1000px) { */
 		[data-resolution='tablet'] {
 			display: none;
 		}
 		[data-resolution='desktop'] {
 			display: block;
 		}
-		header {
+		/* header {
 			padding: 0 6rem;
-		}
+		} */
 	}
 `;
 export default Wrapper;

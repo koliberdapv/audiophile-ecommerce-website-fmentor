@@ -222,7 +222,8 @@ img {
 	width: calc(100% - 3rem);
 	background-color: transparent;
 }
-@media screen and (width > 730px) {
+/* @media screen and (width > 730px) { */
+@media screen and (width > 600px) {
 	.width-controller {
 		width: calc(100% - 5rem);
 	}
@@ -230,7 +231,9 @@ img {
 .flex-column {
 	flex-direction: column;
 }
-@media screen and (width > 767px) {
+/* @media screen and (width > 767px) { */
+/* @media screen and (width > 730px) { */
+@media screen and (width > 600px) {
 	.flex-column {
 		flex-direction: row;
 	}

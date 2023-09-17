@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.main`
 	color: var(--clr-white);
-	background-color: var(--clr-black-1);
+	/* background-color: var(--clr-black-1); */
 	background-color: transparent;
 	overflow: hidden;
 	position: relative;
@@ -10,7 +10,7 @@ const Wrapper = styled.main`
 		isolation: isolate;
 		text-align: center;
 		padding: 8.5rem 0;
-		justify-content: center;
+		justify-items: center;
 	}
 	h1 {
 		font-size: 2.25rem;
@@ -62,21 +62,32 @@ const Wrapper = styled.main`
 		}
 	}
 	@media screen and (width > 1200px) {
+		/* @media screen and (width > 1000px) { */
 		.background-img {
 			top: 50%;
 		}
 		.home-container {
 			padding: 9rem 0;
 			text-align: left;
+			justify-items: left;
 		}
 		.info,
 		header {
 			margin-inline: 0;
 		}
 	}
+	/* @media screen and (width > 1000px) {
+		[data-resolution='tablet'] {
+			display: none;
+		}
+		[data-resolution='desktop'] {
+			display: block;
+		}
+	} */
 	@media screen and (width > 1270px) {
+		/* @media screen and (width > 1000px) { */
 		.home-container {
-			padding: 10rem 0;
+			/* padding: 10rem 0; */
 		}
 	}
 `;

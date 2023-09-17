@@ -28,7 +28,8 @@ const Wrapper = styled.footer`
 	.date-socials {
 		gap: 3rem;
 	}
-	@media screen and (width > 767px) {
+	/* @media screen and (width > 767px) { */
+	@media screen and (width > 600px) {
 		.footer-container {
 			text-align: left;
 		}
@@ -43,7 +44,7 @@ const Wrapper = styled.footer`
 			justify-content: space-between;
 		}
 	}
-	@media screen and (width > 1200px) {
+	@media screen and (width > 1000px) {
 		.footer-container {
 			grid-template-columns: auto auto;
 			justify-content: space-between;
