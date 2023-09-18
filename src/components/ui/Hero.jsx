@@ -11,17 +11,17 @@ const Hero = () => {
 					<img
 						src={hero_img_mobile}
 						alt="black headphones"
-						data-resolution="mobile"
+						data-resolution="mobile-hero"
 					/>
 					<img
 						src={hero_img_tablet}
 						alt="black headphones"
-						data-resolution="tablet"
+						data-resolution="tablet-hero"
 					/>
 					<img
 						src={hero_img_desktop}
 						alt="black headphones"
-						data-resolution="desktop"
+						data-resolution="desktop-hero"
 					/>
 				</figure>
 				<div className="home-container | grid">

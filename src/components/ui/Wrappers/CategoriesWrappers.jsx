@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 const Wrapper = styled.section`
+	.homepage-margin {
+		margin: 2.5rem 0 7.5rem;
+	}
 	.title {
 		font-weight: var(--fw-700);
 		letter-spacing: var(--spacing-subtitle);
@@ -61,6 +64,9 @@ const Wrapper = styled.section`
 		.earphones-img {
 			transform: translateY(-17.5%);
 		}
+		.homepage-margin {
+			margin: 6rem 0;
+		}
 	}
 	/* @media screen and (width > 1200px) { */
 	@media screen and (width > 1000px) {
@@ -76,6 +82,9 @@ const Wrapper = styled.section`
 		}
 		.category-container {
 			gap: 1.875rem;
+		}
+		.homepage-margin {
+			margin: 7.96rem 0 10.5rem;
 		}
 	}
 `;

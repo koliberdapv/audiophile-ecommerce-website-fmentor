@@ -2,11 +2,15 @@ import Wrapper from './Wrappers/PreFooterInfoWrapper';
 import person_img_mobile from '../../assets/shared/mobile/image-best-gear.jpg';
 import person_img_tablet from '../../assets/shared/tablet/image-best-gear.jpg';
 import person_img_desktop from '../../assets/shared/desktop/image-best-gear.jpg';
-const PreFooterInfo = () => {
+const PreFooterInfo = ({ homePage }) => {
 	return (
 		<Wrapper>
 			<div className="width-controller">
-				<div className="content-container | grid">
+				<div
+					className={`content-container | grid justify-center ${
+						homePage && 'homepage-margin'
+					}`}
+				>
 					<figure className="img-container">
 						<img
 							src={person_img_mobile}

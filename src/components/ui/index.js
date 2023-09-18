@@ -1,10 +1,12 @@
 import Categories from './Categories';
+import CategoryHeader from './CategoryHeader';
 import Footer from './Footer';
 import Hero from './Hero';
 import Links from './Links';
 import Logo from './Logo';
 import Navbar from './Navbar';
 import PreFooterInfo from './PreFooterInfo';
+import { ProductInfo } from './ProductInfo';
 import SharedLayout from './SharedLayout';
 import Socials from './Socials';
 export {
@@ -17,4 +19,6 @@ export {
 	Hero,
 	Categories,
 	PreFooterInfo,
+	CategoryHeader,
+	ProductInfo,
 };

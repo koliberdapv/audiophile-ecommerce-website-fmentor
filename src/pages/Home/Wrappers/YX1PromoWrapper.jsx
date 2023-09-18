@@ -8,20 +8,21 @@ const Wrapper = styled.article`
 		border-radius: var(--br-form);
 		overflow: hidden;
 	}
-	.img-container,
 	header {
-		aspect-ratio: 1/0.611;
-	}
-	header {
-		padding: 2.5rem 0 2.5rem 1.5rem;
+		/* padding: 2.5rem 0 2.5rem 1.5rem; */
+		padding: 0 1.5rem;
 		align-content: center;
 		gap: 2rem;
 		border-radius: var(--br-form);
 		background-color: var(--clr-counter-bg);
+		min-height: 12.5rem;
 	}
-	@media screen and (width < 300px) {
+	@media screen and (width > 380px) {
+		.img-container,
 		header {
-			aspect-ratio: 0;
+			aspect-ratio: 1/0.611;
+			/* padding: 0; */
+			min-height: unset;
 		}
 	}
 	@media screen and (width > 600px) {
@@ -38,12 +39,6 @@ const Wrapper = styled.article`
 		}
 	}
 	@media screen and (width > 1000px) {
-		[data-resolution='tablet'] {
-			display: none;
-		}
-		[data-resolution='desktop'] {
-			display: block;
-		}
 		.img-container,
 		header {
 			aspect-ratio: 1/0.592;

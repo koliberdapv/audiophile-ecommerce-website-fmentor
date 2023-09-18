@@ -18,9 +18,8 @@ const Wrapper = styled.article`
 	}
 	.content-container {
 		gap: 2.5rem;
+		margin: 7.5rem 0;
 	}
-	/* @media screen and (width < 678px) { */
-	/* @media screen and (width < 730px) { */
 	@media screen and (width < 600px) {
 		h2 {
 			font-size: var(--fs-600);
@@ -32,11 +31,15 @@ const Wrapper = styled.article`
 		p {
 			max-width: 35.8rem;
 		}
+		.homepage-margin {
+			margin: 6rem 0;
+		}
 	}
 	@media screen and (width > 1000px) {
 		.content-container {
 			grid-template-columns: 1fr 1fr;
 			gap: 1.875rem;
+			margin: 10rem 0;
 		}
 		.img-container {
 			order: 2;
@@ -49,6 +52,9 @@ const Wrapper = styled.article`
 		h2,
 		p {
 			max-width: 27.8rem;
+		}
+		.homepage-margin {
+			margin: 12.5rem 0;
 		}
 	}
 	@media screen and (width > 1000px) {

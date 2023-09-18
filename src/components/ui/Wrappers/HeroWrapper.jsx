@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 const Wrapper = styled.main`
 	color: var(--clr-white);
-	/* background-color: var(--clr-black-1); */
 	background-color: transparent;
+	background-color: var(--clr-black-1);
 	overflow: hidden;
 	position: relative;
 	.home-container {
@@ -40,6 +40,7 @@ const Wrapper = styled.main`
 	}
 	.overline {
 		opacity: 0.5;
+		color: var(--clr-white);
 	}
 	@media screen and (width > 600px) {
 		.background-img {
@@ -61,8 +62,29 @@ const Wrapper = styled.main`
 			max-width: 349px;
 		}
 	}
+	[data-resolution='tablet-hero'] {
+		display: none;
+	}
+	[data-resolution='desktop-hero'] {
+		display: none;
+	}
+	@media screen and (width > 600px) {
+		[data-resolution='mobile-hero'] {
+			display: none;
+		}
+		[data-resolution='tablet-hero'] {
+			display: block;
+		}
+	}
 	@media screen and (width > 1200px) {
-		/* @media screen and (width > 1000px) { */
+		[data-resolution='tablet-hero'] {
+			display: none;
+		}
+		[data-resolution='desktop-hero'] {
+			display: block;
+		}
+	}
+	@media screen and (width > 1200px) {
 		.background-img {
 			top: 50%;
 		}
@@ -74,20 +96,6 @@ const Wrapper = styled.main`
 		.info,
 		header {
 			margin-inline: 0;
-		}
-	}
-	/* @media screen and (width > 1000px) {
-		[data-resolution='tablet'] {
-			display: none;
-		}
-		[data-resolution='desktop'] {
-			display: block;
-		}
-	} */
-	@media screen and (width > 1270px) {
-		/* @media screen and (width > 1000px) { */
-		.home-container {
-			/* padding: 10rem 0; */
 		}
 	}
 `;

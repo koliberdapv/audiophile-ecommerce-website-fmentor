@@ -4,7 +4,7 @@ import speakers_img from '../../assets/shared/categories/speakers-mobile.png';
 import earphones_img from '../../assets/shared/categories/earbuds-mobile.png';
 import { useState } from 'react';
 import { LinkButton } from '../buttons';
-const Categories = () => {
+const Categories = ({ homePage }) => {
 	const [categoryList, setCategoryList] = useState([
 		'headphones',
 		'speakers',
@@ -13,7 +13,11 @@ const Categories = () => {
 	return (
 		<Wrapper>
 			<div className="width-controller">
-				<ul className="category-container | grid justify-center">
+				<ul
+					className={`category-container | grid justify-center ${
+						homePage && 'homepage-margin'
+					}`}
+				>
 					{categoryList.map((category, index) => {
 						return (
 							<li
