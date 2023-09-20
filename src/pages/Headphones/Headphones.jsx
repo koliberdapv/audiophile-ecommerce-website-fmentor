@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import data from '../../data/headphones';
+import data from '../../data/category/headphones';
 import Wrapper from './Wrappers/HeadphonesWrapper';
 import { isNumberOdd, scrollToTop } from '../../utils';
 import {

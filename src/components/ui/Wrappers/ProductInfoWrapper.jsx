@@ -23,7 +23,7 @@ const Wrapper = styled.section`
 	@media screen and (width < 600px) {
 		h2 {
 			font-size: var(--fs-600);
-			letter-spacing: var(--spacing-h4);
+			letter-spacing: var(--spacing-subtitle);
 			line-height: var(--line-height-h4);
 		}
 	}

@@ -1,17 +1,18 @@
 import styled from 'styled-components';
-
 const Wrapper = styled.section`
-	.promos {
-		gap: 1.5rem;
+	.products {
+		margin: 4rem 0 7.5rem;
+		gap: 7.5rem;
 	}
 	@media screen and (width > 600px) {
-		.promos {
-			gap: 2rem;
+		.products {
+			margin: 7.5rem 0;
 		}
 	}
 	@media screen and (width > 1000px) {
-		.promos {
-			gap: 3rem;
+		.products {
+			margin: 10rem 0;
+			gap: 10rem;
 		}
 	}
 `;

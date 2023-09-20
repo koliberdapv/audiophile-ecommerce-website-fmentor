@@ -8,6 +8,7 @@ import Navbar from './Navbar';
 import PreFooterInfo from './PreFooterInfo';
 import { ProductInfo } from './ProductInfo';
 import SharedLayout from './SharedLayout';
+import SingleProductInfo from './SingleProductInfo';
 import Socials from './Socials';
 export {
 	SharedLayout,
@@ -21,4 +22,5 @@ export {
 	PreFooterInfo,
 	CategoryHeader,
 	ProductInfo,
+	SingleProductInfo,
 };

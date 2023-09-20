@@ -7,6 +7,7 @@ import Speakers from './pages/Speakers/Speakers';
 import Product from './pages/Product/Product';
 import Checkout from './pages/Checkout/Checkout';
 import Error from './pages/Error/Error';
+import { productList } from './data/products/product_list';
 
 function App() {
 	return (
@@ -33,13 +34,18 @@ function App() {
 						element={<Earphones />}
 					/>
 					<Route
-						path="/product/:id"
-						element={<Product />}
-					/>
-					<Route
 						path="/checkout"
 						element={<Checkout />}
 					/>
+					{productList.map((product, index) => {
+						return (
+							<Route
+								path={`/product/${product.link}`}
+								key={index}
+								element={<product.element />}
+							/>
+						);
+					})}
 				</Route>
 				<Route
 					path="*"

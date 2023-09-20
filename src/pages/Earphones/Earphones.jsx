@@ -1,11 +1,35 @@
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import data from '../../data/category/earphones';
+import Wrapper from './Wrappers/EarphonesWrapper';
+import { isNumberOdd, scrollToTop } from '../../utils';
+import {
+	Categories,
+	CategoryHeader,
+	PreFooterInfo,
+	ProductInfo,
+} from '../../components/ui';
 
 const Earphones = () => {
+	useEffect(() => {
+		scrollToTop();
+	}, []);
 	return (
-		<div>
-			<h1>Earphones</h1>
-			<Link to="/">home</Link>
-		</div>
+		<Wrapper>
+			<CategoryHeader title="headphones" />
+			<section className="products | grid">
+				{data.map((product, index) => {
+					return (
+						<ProductInfo
+							key={index}
+							data={product}
+							inverted={isNumberOdd(index)}
+						/>
+					);
+				})}
+			</section>
+			<Categories />
+			<PreFooterInfo />
+		</Wrapper>
 	);
 };
 

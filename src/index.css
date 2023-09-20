@@ -65,6 +65,7 @@ html {
 	--spacing-h5: 1.7px;
 	--spacing-h6: 1.3px;
 	--spacing-overline: 10px;
+	--spacing-overline-small: 8.571px;
 	--spacing-subtitle: 1px;
 
 	--line-height-h1: 58px;
@@ -103,7 +104,7 @@ h6,
 }
 
 h1 {
-	font-size: 3.5rem;
+	/* font-size: 3.5rem; */
 	font-size: var(--fs-900);
 	letter-spacing: var(--spacing-h1);
 	line-height: var(--line-height-h1);
@@ -226,7 +227,7 @@ img {
 /* @media screen and (width > 730px) { */
 @media screen and (width > 600px) {
 	.width-controller {
-		width: calc(100% - 5rem);
+		width: calc(100% - 4.875rem);
 	}
 }
 .flex-column {
