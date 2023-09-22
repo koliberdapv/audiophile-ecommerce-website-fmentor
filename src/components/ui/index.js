@@ -8,6 +8,8 @@ import Navbar from './Navbar';
 import PreFooterInfo from './PreFooterInfo';
 import { ProductInfo } from './ProductInfo';
 import SharedLayout from './SharedLayout';
+import SingleProductAbout from './SingleProductAbout';
+import SingleProductGallery from './SingleProductGallery';
 import SingleProductInfo from './SingleProductInfo';
 import Socials from './Socials';
 export {
@@ -23,4 +25,6 @@ export {
 	CategoryHeader,
 	ProductInfo,
 	SingleProductInfo,
+	SingleProductAbout,
+	SingleProductGallery,
 };

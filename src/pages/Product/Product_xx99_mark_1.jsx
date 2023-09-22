@@ -1,6 +1,14 @@
 import Wrapper from './Wrappers/ProductWrapper';
-import { SingleProductInfo } from '../../components/ui';
-import { productInfo } from '../../data/products/xx99_mark_1';
+import {
+	SingleProductAbout,
+	SingleProductGallery,
+	SingleProductInfo,
+} from '../../components/ui';
+import {
+	productAbout,
+	productImages,
+	productInfo,
+} from '../../data/products/xx99_mark_1';
 import { useEffect } from 'react';
 import { scrollToTop } from '../../utils';
 const Product_xx99_mark_1 = () => {
@@ -10,6 +18,8 @@ const Product_xx99_mark_1 = () => {
 	return (
 		<Wrapper>
 			<SingleProductInfo data={productInfo} />
+			<SingleProductAbout data={productAbout} />
+			<SingleProductGallery data={productImages} />
 		</Wrapper>
 	);
 };
