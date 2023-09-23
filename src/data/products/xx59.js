@@ -68,3 +68,5 @@ export const productImages = [
 		alt: `a headphones hanged on the arm of a person`,
 	},
 ];
+
+export const recommendations = ['XX99 Mark II', 'XX99 Mark I', 'ZX9 Speaker'];

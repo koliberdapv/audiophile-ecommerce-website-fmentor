@@ -7,6 +7,7 @@ import Logo from './Logo';
 import Navbar from './Navbar';
 import PreFooterInfo from './PreFooterInfo';
 import { ProductInfo } from './ProductInfo';
+import Recommendations from './Recommendations';
 import SharedLayout from './SharedLayout';
 import SingleProductAbout from './SingleProductAbout';
 import SingleProductGallery from './SingleProductGallery';
@@ -27,4 +28,5 @@ export {
 	SingleProductInfo,
 	SingleProductAbout,
 	SingleProductGallery,
+	Recommendations,
 };

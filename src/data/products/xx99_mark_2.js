@@ -72,3 +72,5 @@ export const productImages = [
 		alt: `headphones' earcups close-up`,
 	},
 ];
+
+export const recommendations = ['XX99 Mark I', 'XX59', 'ZX9 Speaker'];
