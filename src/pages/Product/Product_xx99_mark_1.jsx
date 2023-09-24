@@ -1,5 +1,7 @@
 import Wrapper from './Wrappers/ProductWrapper';
 import {
+	Categories,
+	PreFooterInfo,
 	Recommendations,
 	SingleProductAbout,
 	SingleProductGallery,
@@ -19,10 +21,14 @@ const Product_xx99_mark_1 = () => {
 	}, []);
 	return (
 		<Wrapper>
-			<SingleProductInfo data={productInfo} />
-			<SingleProductAbout data={productAbout} />
-			<SingleProductGallery data={productImages} />
+			<section className="product-specific-info | grid">
+				<SingleProductInfo data={productInfo} />
+				<SingleProductAbout data={productAbout} />
+				<SingleProductGallery data={productImages} />
+			</section>
 			<Recommendations data={recommendations} />
+			<Categories />
+			<PreFooterInfo />
 		</Wrapper>
 	);
 };

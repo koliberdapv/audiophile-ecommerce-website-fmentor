@@ -1,9 +1,11 @@
+import { BackButton } from '../buttons';
 import Wrapper from './Wrappers/SingleProductInfoWrapper';
 const SingleProductInfo = ({ data }) => {
 	const { images, name, description, isNew } = data;
 	return (
 		<Wrapper>
 			<div className="width-controller">
+				<BackButton />
 				<div className="content-container | grid">
 					<figure className="img-container">
 						<img

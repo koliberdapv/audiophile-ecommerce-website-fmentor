@@ -31,6 +31,9 @@ const Wrapper = styled.article`
 		p {
 			max-width: 35.8rem;
 		}
+		.content-container {
+			gap: 3.9375rem;
+		}
 		.homepage-margin {
 			margin: 6rem 0;
 		}

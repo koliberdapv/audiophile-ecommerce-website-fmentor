@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 const Wrapper = styled.main`
-	margin: 5rem 0;
 	.content-container {
 		gap: 2rem;
 	}
@@ -23,7 +22,16 @@ const Wrapper = styled.main`
 	.img-container img {
 		border-radius: var(--br-form);
 	}
-
+	.back-btn {
+		text-transform: capitalize;
+		background-color: transparent;
+		opacity: 0.5;
+		padding: 0.5rem 1rem 0.5rem 0;
+		margin-top: 0.5rem;
+		margin-bottom: 1rem;
+		transition: none;
+		color: var(--clr-full-black);
+	}
 	@media screen and (width > 600px) {
 		.content-container {
 			grid-template-columns: 41% 1fr;
@@ -35,6 +43,9 @@ const Wrapper = styled.main`
 		h1 {
 			margin-top: -0.5rem;
 			margin-bottom: 0.5rem;
+		}
+		.back-btn {
+			margin-top: 1.5625rem;
 		}
 	}
 	@media screen and (width > 600px) {
@@ -61,6 +72,10 @@ const Wrapper = styled.main`
 			font-size: var(--fs-800);
 			letter-spacing: var(--spacing-h2);
 			line-height: var(--line-height-h2);
+		}
+		.back-btn {
+			margin-top: 4.4375rem;
+			margin-bottom: 3rem;
 		}
 	}
 `;

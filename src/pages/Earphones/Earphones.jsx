@@ -15,7 +15,7 @@ const Earphones = () => {
 	}, []);
 	return (
 		<Wrapper>
-			<CategoryHeader title="headphones" />
+			<CategoryHeader title="earphones" />
 			<section className="products | grid">
 				{data.map((product, index) => {
 					return (

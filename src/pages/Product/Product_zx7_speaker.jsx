@@ -1,21 +1,21 @@
 import Wrapper from './Wrappers/ProductWrapper';
 import {
-	SingleProductInfo,
-	SingleProductAbout,
-	SingleProductGallery,
-	Recommendations,
 	Categories,
 	PreFooterInfo,
+	Recommendations,
+	SingleProductAbout,
+	SingleProductGallery,
+	SingleProductInfo,
 } from '../../components/ui';
 import {
 	productAbout,
 	productImages,
 	productInfo,
 	recommendations,
-} from '../../data/products/xx99_mark_2';
+} from '../../data/products/zx7_speaker';
 import { useEffect } from 'react';
 import { scrollToTop } from '../../utils';
-const Product_xx99_mark_2 = () => {
+const Product_zx7_speaker = () => {
 	useEffect(() => {
 		scrollToTop();
 	}, []);
@@ -33,4 +33,4 @@ const Product_xx99_mark_2 = () => {
 	);
 };
 
-export default Product_xx99_mark_2;
+export default Product_zx7_speaker;

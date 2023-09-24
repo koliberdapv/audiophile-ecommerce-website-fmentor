@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 const Wrapper = styled.article`
+	margin: 7.5rem 0;
 	.content-container {
 		gap: 2.5rem;
 		text-align: center;
@@ -35,6 +36,7 @@ const Wrapper = styled.article`
 		}
 	}
 	@media screen and (width > 1000px) {
+		margin: 10rem 0;
 		.content-container {
 			gap: 4rem;
 		}

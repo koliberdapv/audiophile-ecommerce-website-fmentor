@@ -55,7 +55,6 @@ const Wrapper = styled.section`
 	.earphones-img {
 		scale: 1.5;
 	}
-	/* @media screen and (width > 767px) { */
 	@media screen and (width > 600px) {
 		.category-container {
 			gap: 0.625rem;
@@ -68,7 +67,6 @@ const Wrapper = styled.section`
 			margin: 6rem 0;
 		}
 	}
-	/* @media screen and (width > 1200px) { */
 	@media screen and (width > 1000px) {
 		.title {
 			font-size: var(--fs-400);
