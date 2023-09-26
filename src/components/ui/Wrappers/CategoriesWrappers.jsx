@@ -34,8 +34,8 @@ const Wrapper = styled.section`
 	}
 	.category-container {
 		gap: 1.5rem;
-		/* margin: 3rem 0; */
 		grid-template-columns: 100%;
+		align-content: flex-end;
 	}
 	.category {
 		text-align: center;
@@ -55,13 +55,19 @@ const Wrapper = styled.section`
 	.earphones-img {
 		scale: 1.5;
 	}
+	a:hover span,
+	a:focus span {
+		color: var(--clr-dark-orange);
+		opacity: 1;
+	}
 	@media screen and (width > 600px) {
 		.category-container {
 			gap: 0.625rem;
 			grid-template-columns: repeat(3, 1fr);
 		}
 		.earphones-img {
-			transform: translateY(-17.5%);
+			/* transform: translateY(-17.5%); */
+			transform: translateY(-12%);
 		}
 		.homepage-margin {
 			margin: 6rem 0;

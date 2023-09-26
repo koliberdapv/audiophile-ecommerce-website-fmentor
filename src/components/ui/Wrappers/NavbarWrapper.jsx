@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
 
-const Wrapper = styled.nav`
+const Wrapper = styled.header`
 	background-color: var(--clr-black-1);
 	overflow: hidden;
 	.nav-container {
@@ -9,6 +9,13 @@ const Wrapper = styled.nav`
 		button {
 			padding: 0.5rem;
 			background-color: transparent;
+		}
+		.menu-btn {
+			margin-left: -0.5rem;
+		}
+
+		.cart-btn {
+			margin-right: -0.5rem;
 		}
 	}
 	.nav-container::after {
@@ -25,7 +32,7 @@ const Wrapper = styled.nav`
 	.mobile-width {
 		display: none;
 	}
-	@media screen and (width > 767px) {
+	@media screen and (width > 600px) {
 		.nav-container {
 			gap: 2rem;
 			justify-content: left;
@@ -38,7 +45,7 @@ const Wrapper = styled.nav`
 			width: 100%;
 		}
 	}
-	@media screen and (width > 1200px) {
+	@media screen and (width > 1000px) {
 		.menu-btn {
 			display: none;
 		}
@@ -47,6 +54,7 @@ const Wrapper = styled.nav`
 		}
 		.mobile-width {
 			display: inline-block;
+			margin-left: -7rem;
 		}
 	}
 `;

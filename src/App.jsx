@@ -1,13 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { SharedLayout } from './components/ui/';
-import Home from './pages/Home/Home';
-import Headphones from './pages/Headphones/Headphones';
-import Earphones from './pages/Earphones/Earphones';
-import Speakers from './pages/Speakers/Speakers';
-import Product from './pages/Product/Product';
-import Checkout from './pages/Checkout/Checkout';
-import Error from './pages/Error/Error';
-import { productList } from './data/products/product_list';
+import { productList } from './data/product_list';
+import { pagesList } from './data/pages_list';
 
 function App() {
 	return (
@@ -17,40 +11,28 @@ function App() {
 					path="/"
 					element={<SharedLayout />}
 				>
-					<Route
-						index
-						element={<Home />}
-					/>
-					<Route
-						path="/category/headphones"
-						element={<Headphones />}
-					/>
-					<Route
-						path="/category/speakers"
-						element={<Speakers />}
-					/>
-					<Route
-						path="/category/earphones"
-						element={<Earphones />}
-					/>
-					<Route
-						path="/checkout"
-						element={<Checkout />}
-					/>
-					{productList.map((product, index) => {
+					{pagesList.map((page, index) => {
+						const { name, direction, ElementName } = page;
 						return (
 							<Route
-								path={`/product/${product.link}`}
+								index={name === 'home'}
 								key={index}
-								element={<product.element />}
+								path={direction}
+								element={<ElementName />}
+							/>
+						);
+					})}
+					{productList.map((product, index) => {
+						const { direction, ElementName } = product;
+						return (
+							<Route
+								key={index}
+								path={direction}
+								element={<ElementName />}
 							/>
 						);
 					})}
 				</Route>
-				<Route
-					path="*"
-					element={<Error />}
-				/>
 			</Routes>
 		</BrowserRouter>
 	);

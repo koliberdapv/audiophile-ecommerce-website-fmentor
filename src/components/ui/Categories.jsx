@@ -1,15 +1,9 @@
 import Wrapper from './Wrappers/CategoriesWrappers';
-import headphones_img from '../../assets/shared/categories/headphones-mobile.png';
-import speakers_img from '../../assets/shared/categories/speakers-mobile.png';
-import earphones_img from '../../assets/shared/categories/earbuds-mobile.png';
-import { useState } from 'react';
+import { categoryList } from '../../data/category_list';
 import { LinkButton } from '../buttons';
+import { Link } from 'react-router-dom';
+
 const Categories = ({ homePage }) => {
-	const [categoryList, setCategoryList] = useState([
-		'headphones',
-		'speakers',
-		'earphones',
-	]);
 	return (
 		<Wrapper>
 			<div className="width-controller">
@@ -19,35 +13,27 @@ const Categories = ({ homePage }) => {
 					}`}
 				>
 					{categoryList.map((category, index) => {
+						const { name, image } = category;
 						return (
-							<li
-								key={index}
-								className="category | grid justify-center"
+							<Link
+								to={`/category/${name}`}
+								className="grid"
 							>
-								<figure className="img-container">
-									{category === 'headphones' && (
+								<li
+									key={index}
+									className="category | grid justify-center"
+								>
+									<figure className="img-container">
 										<img
-											src={headphones_img}
-											alt="headphones"
+											src={image}
+											alt={name}
+											className={name === 'earphones' && 'earphones-img'}
 										/>
-									)}
-									{category === 'speakers' && (
-										<img
-											src={speakers_img}
-											alt="speakers"
-										/>
-									)}
-									{category === 'earphones' && (
-										<img
-											src={earphones_img}
-											alt="earphones"
-											className="earphones-img"
-										/>
-									)}
-								</figure>
-								<p className="title">{category}</p>
-								<LinkButton direction={category} />
-							</li>
+									</figure>
+									<p className="title">{name}</p>
+									<LinkButton direction={name} />
+								</li>
+							</Link>
 						);
 					})}
 				</ul>
