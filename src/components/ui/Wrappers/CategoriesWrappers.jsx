@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 const Wrapper = styled.section`
 	.homepage-margin {
-		margin: 2.5rem 0 7.5rem;
+		padding: 2.5rem 0 7.5rem;
 	}
 	.title {
 		font-weight: var(--fw-700);
@@ -66,7 +66,6 @@ const Wrapper = styled.section`
 			grid-template-columns: repeat(3, 1fr);
 		}
 		.earphones-img {
-			/* transform: translateY(-17.5%); */
 			transform: translateY(-12%);
 		}
 		.homepage-margin {
@@ -88,7 +87,7 @@ const Wrapper = styled.section`
 			gap: 1.875rem;
 		}
 		.homepage-margin {
-			margin: 7.96rem 0 10.5rem;
+			padding: 7.96rem 0 10.5rem;
 		}
 	}
 `;

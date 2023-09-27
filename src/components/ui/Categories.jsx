@@ -3,31 +3,34 @@ import { categoryList } from '../../data/category_list';
 import { LinkButton } from '../buttons';
 import { Link } from 'react-router-dom';
 
-const Categories = ({ homePage }) => {
+const Categories = ({ homePage, isSidebarOpen, setIsSidebarOpen }) => {
 	return (
-		<Wrapper>
+		<Wrapper className={isSidebarOpen ? 'categories-sidebar' : undefined}>
 			<div className="width-controller">
 				<ul
-					className={`category-container | grid justify-center ${
-						homePage && 'homepage-margin'
-					}`}
+					className={
+						homePage
+							? 'category-container | grid justify-center homepage-margin'
+							: 'category-container | grid justify-center'
+					}
 				>
 					{categoryList.map((category, index) => {
 						const { name, image } = category;
 						return (
 							<Link
+								onClick={() => setIsSidebarOpen(!isSidebarOpen)}
 								to={`/category/${name}`}
 								className="grid"
+								key={index}
 							>
-								<li
-									key={index}
-									className="category | grid justify-center"
-								>
+								<li className="category | grid justify-center">
 									<figure className="img-container">
 										<img
 											src={image}
 											alt={name}
-											className={name === 'earphones' && 'earphones-img'}
+											className={
+												name === 'earphones' ? 'earphones-img' : undefined
+											}
 										/>
 									</figure>
 									<p className="title">{name}</p>

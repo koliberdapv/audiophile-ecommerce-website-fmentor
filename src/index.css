@@ -225,7 +225,6 @@ img {
 	width: calc(100% - 3rem);
 	background-color: transparent;
 }
-/* @media screen and (width > 730px) { */
 @media screen and (width > 600px) {
 	.width-controller {
 		width: calc(100% - 4.875rem);
@@ -234,8 +233,6 @@ img {
 .flex-column {
 	flex-direction: column;
 }
-/* @media screen and (width > 767px) { */
-/* @media screen and (width > 730px) { */
 @media screen and (width > 600px) {
 	.flex-column {
 		flex-direction: row;
@@ -255,7 +252,6 @@ img {
 		display: block;
 	}
 }
-/* @media screen and (width > 1200px) { */
 @media screen and (width > 1000px) {
 	[data-resolution='tablet'] {
 		display: none;
@@ -263,4 +259,10 @@ img {
 	[data-resolution='desktop'] {
 		display: block;
 	}
+}
+.fix-navbar {
+	position: sticky;
+	z-index: 2;
+	top: 0;
+	left: 0;
 }

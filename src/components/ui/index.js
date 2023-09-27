@@ -1,3 +1,4 @@
+import AsideNav from './AsideNav';
 import Categories from './Categories';
 import CategoryHeader from './CategoryHeader';
 import Footer from './Footer';
@@ -29,4 +30,5 @@ export {
 	SingleProductAbout,
 	SingleProductGallery,
 	Recommendations,
+	AsideNav,
 };

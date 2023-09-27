@@ -47,7 +47,7 @@ const Wrapper = styled.main`
 			top: 48%;
 		}
 	}
-	@media screen and (width > 768px) {
+	@media screen and (width > 767px) {
 		.background-img {
 			top: 45%;
 		}

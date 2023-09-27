@@ -2,12 +2,15 @@ import cart from '../../assets/shared/mobile/cart.svg';
 import hamburger from '../../assets/shared/mobile/hamburger.svg';
 import Wrapper from './Wrappers/NavbarWrapper';
 import { Links, Logo } from './';
-const Navbar = () => {
+const Navbar = ({ isSidebarOpen, setIsSidebarOpen }) => {
 	return (
-		<Wrapper>
+		<Wrapper className={isSidebarOpen ? 'fix-navbar' : undefined}>
 			<div className="width-controller">
-				<section className="nav-container | flex align-center justify-space">
-					<button className="menu-btn">
+				<nav className="nav-container | flex align-center justify-space">
+					<button
+						className="menu-btn"
+						onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+					>
 						<figure className="grid center">
 							<img
 								src={hamburger}
@@ -25,7 +28,7 @@ const Navbar = () => {
 							/>
 						</figure>
 					</button>
-				</section>
+				</nav>
 			</div>
 		</Wrapper>
 	);
