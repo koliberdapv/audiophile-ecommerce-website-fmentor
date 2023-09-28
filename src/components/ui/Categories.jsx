@@ -3,9 +3,16 @@ import { categoryList } from '../../data/category_list';
 import { LinkButton } from '../buttons';
 import { Link } from 'react-router-dom';
 
-const Categories = ({ homePage, isSidebarOpen, setIsSidebarOpen }) => {
+const Categories = ({ homePage, isSidebarOpen, setIsSidebarOpen, onClick }) => {
 	return (
 		<Wrapper className={isSidebarOpen ? 'categories-sidebar' : undefined}>
+			{isSidebarOpen && (
+				<button
+					className="sidebar-shadow"
+					id="sidebar-shadow"
+					onClick={onClick}
+				></button>
+			)}
 			<div className="width-controller">
 				<ul
 					className={

@@ -4,13 +4,22 @@ import { useState } from 'react';
 
 const SharedLayout = () => {
 	const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+	const onClick = () => {
+		const shadow = document.getElementById('sidebar-shadow');
+		const shadowHeight = document.body.getBoundingClientRect().height - 84;
+		shadow.style.height = `${shadowHeight}px`;
+		setIsSidebarOpen(!isSidebarOpen);
+	};
 	return (
 		<>
 			<Navbar
 				isSidebarOpen={isSidebarOpen}
-				setIsSidebarOpen={setIsSidebarOpen}
+				onClick={onClick}
 			/>
-			<AsideNav isSidebarOpen={isSidebarOpen} />
+			<AsideNav
+				isSidebarOpen={isSidebarOpen}
+				onClick={onClick}
+			/>
 			<Outlet />
 			<Footer />
 		</>

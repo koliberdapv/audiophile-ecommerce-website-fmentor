@@ -260,9 +260,12 @@ img {
 		display: block;
 	}
 }
-.fix-navbar {
-	position: sticky;
-	z-index: 2;
-	top: 0;
-	left: 0;
+.aside-open {
+	transform: translateX(0) !important;
+	opacity: 1 !important;
+	transition: transform 250ms ease-out, opacity 250ms ease-out !important;
+	transition: transform 250ms ease-out, opacity 400ms ease-out !important;
+}
+.aside-open .sidebar-shadow {
+	opacity: 0.4 !important;
 }
