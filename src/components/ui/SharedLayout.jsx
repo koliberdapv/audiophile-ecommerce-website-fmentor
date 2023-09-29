@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import { Navbar, Footer, AsideNav } from '.';
+import { Navbar, Footer, AsideNav, Cart } from '.';
 import { useState } from 'react';
 
 const SharedLayout = () => {
@@ -16,11 +16,12 @@ const SharedLayout = () => {
 				isSidebarOpen={isSidebarOpen}
 				onClick={onClick}
 			/>
+			<Cart />
 			<AsideNav
 				isSidebarOpen={isSidebarOpen}
 				onClick={onClick}
 			/>
-			<Outlet />
+			{/* <Outlet /> */}
 			<Footer />
 		</>
 	);

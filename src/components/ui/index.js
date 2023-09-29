@@ -1,4 +1,5 @@
 import AsideNav from './AsideNav';
+import Cart from './Cart';
 import Categories from './Categories';
 import CategoryHeader from './CategoryHeader';
 import Footer from './Footer';
@@ -31,4 +32,5 @@ export {
 	SingleProductGallery,
 	Recommendations,
 	AsideNav,
+	Cart,
 };
