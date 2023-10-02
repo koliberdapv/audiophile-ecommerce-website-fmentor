@@ -1,29 +1,17 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { useEffect, useReducer } from 'react';
-import { cartItemsList } from '../../data/features/cart/cartItemsList';
+import { useGlobalContext } from '../../context/context';
+import { cartItemsList } from '../../data/cartItemsList';
 import Wrapper from './Wrappers/CartWrapper';
-import { getCartItems } from '../../data/features/cart/cartSlice';
-// import { getCartItems } from '../../data/features/cart/cartSlice';
 
 const Cart = () => {
-	const {
-		isLoading,
-		numberOfItems,
-		priceTotal,
-		shipping,
-		VAT,
-		grandTotal,
-		listOfItems,
-	} = useSelector((store) => store.cartSlice);
-	const dispatch = useDispatch();
-	// console.log(isLoading);
+  const { listOfItems, changeCartItemAmount } = useGlobalContext();
+  const id = listOfItems[0].id;
+  console.log(listOfItems);
 
-	return (
-		<div>
-			<button onClick={() => dispatch(getCartItems(50000))}>click</button>
-			<button onClick={() => console.log(isLoading)}>log</button>
-		</div>
-	);
+  return (
+    <div>
+      <button onClick={() => changeCartItemAmount(id)}>click</button>
+    </div>
+  );
 };
 
 export default Cart;
