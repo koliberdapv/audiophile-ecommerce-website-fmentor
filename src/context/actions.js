@@ -1,1 +1,2 @@
 export const CHANGE_CART_ITEM_AMOUNT = 'CHANGE_CART_ITEM_AMOUNT';
+export const ADD_TO_CART = 'ADD_TO_CART';

@@ -1,7 +1,10 @@
+import { useGlobalContext } from '../../context/context';
 import { BackButton } from '../buttons';
 import Wrapper from './Wrappers/SingleProductInfoWrapper';
-const SingleProductInfo = ({ data }) => {
+const SingleProductInfo = ({ data, product }) => {
+	const { addToCart } = useGlobalContext();
 	const { images, name, description, isNew } = data;
+	const { id, price } = product;
 	return (
 		<Wrapper>
 			<div className="width-controller">
@@ -28,6 +31,13 @@ const SingleProductInfo = ({ data }) => {
 						{isNew && <p className="overline">new product</p>}
 						<h1>{name}</h1>
 						<p className="text">{description}</p>
+						<button
+							onClick={() => {
+								addToCart({ id, amount: 1, product });
+							}}
+						>
+							add to cart
+						</button>
 					</section>
 				</div>
 			</div>

@@ -15,14 +15,20 @@ import {
 } from '../../data/products/xx99_mark_2';
 import { useEffect } from 'react';
 import { scrollToTop } from '../../utils';
+import { productList } from '../../data/product_list';
+
 const Product_xx99_mark_2 = () => {
+	const product = productList[0];
 	useEffect(() => {
 		scrollToTop();
 	}, []);
 	return (
 		<Wrapper>
 			<section className="product-specific-info | grid">
-				<SingleProductInfo data={productInfo} />
+				<SingleProductInfo
+					data={productInfo}
+					product={product}
+				/>
 				<SingleProductAbout data={productAbout} />
 				<SingleProductGallery data={productImages} />
 			</section>

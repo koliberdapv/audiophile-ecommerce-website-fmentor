@@ -1,14 +1,32 @@
-import { CHANGE_CART_ITEM_AMOUNT } from './actions';
+import { ADD_TO_CART, CHANGE_CART_ITEM_AMOUNT } from './actions';
 
 const reducer = (state, action) => {
-  if (action.type === CHANGE_CART_ITEM_AMOUNT) {
-    const { id } = action.payload;
-    const { numberOfCartItems, shipping, VAT, grandTotal, listOfItems } = state;
-    let newList = listOfItems.filter((item) => item.id === id);
-    newList[0].amountInCart = newList[0].amountInCart + 1;
-    // console.log(newList);
-    return { ...state, listOfItems: [...listOfItems, newList[0]] };
-  }
-  throw new Error(`no matching action type : ${action.type}`);
+	if (action.type === ADD_TO_CART) {
+		const { id, amount, product } = action.payload;
+		const tempItem = state.cart.find((item) => item.id === id);
+		if (tempItem) {
+			const tempCart = state.cart.map((cartItem) => {
+				if (cartItem.id === id) {
+					let newAmount = cartItem.amount + amount;
+					if (newAmount > cartItem.max) {
+						newAmount = cartItem.max;
+					}
+					return { ...cartItem, amount: newAmount };
+				} else return cartItem;
+			});
+			return { ...state, cart: tempCart };
+		} else {
+			const newItem = {
+				id,
+				name: product.name,
+				amount,
+				image: product.image,
+				price: product.price,
+				max: product.amountInStock,
+			};
+			return { ...state, cart: [...state.cart, newItem] };
+		}
+	}
+	throw new Error(`no matching action type : ${action.type}`);
 };
 export default reducer;
