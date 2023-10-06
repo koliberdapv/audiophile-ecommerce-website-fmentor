@@ -15,10 +15,9 @@ import {
 } from '../../data/products/xx99_mark_2';
 import { useEffect } from 'react';
 import { scrollToTop } from '../../utils';
-import { productList } from '../../data/product_list';
 
-const Product_xx99_mark_2 = () => {
-	const product = productList[0];
+const Product_xx99_mark_2 = ({ product }) => {
+	console.log(product);
 	useEffect(() => {
 		scrollToTop();
 	}, []);

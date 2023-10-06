@@ -1,11 +1,40 @@
-import { Link } from 'react-router-dom';
+import Wrapper from './Wrappers/ProductWrapper';
+import {
+	SingleProductInfo,
+	SingleProductAbout,
+	SingleProductGallery,
+	Recommendations,
+	Categories,
+	PreFooterInfo,
+} from '../../components/ui';
+import {
+	productAbout,
+	productImages,
+	productInfo,
+	recommendations,
+} from '../../data/products/xx99_mark_2';
+import { useEffect } from 'react';
+import { scrollToTop } from '../../utils';
 
-const Product = () => {
+const Product = ({ product }) => {
+	console.log(product);
+	useEffect(() => {
+		scrollToTop();
+	}, []);
 	return (
-		<div>
-			<h1>Product</h1>
-			<Link to="/">home</Link>
-		</div>
+		<Wrapper>
+			<section className="product-specific-info | grid">
+				<SingleProductInfo
+					data={productInfo}
+					product={product}
+				/>
+				<SingleProductAbout data={productAbout} />
+				<SingleProductGallery data={productImages} />
+			</section>
+			<Recommendations data={recommendations} />
+			<Categories />
+			<PreFooterInfo />
+		</Wrapper>
 	);
 };
 

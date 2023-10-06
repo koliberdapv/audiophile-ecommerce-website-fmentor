@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { SharedLayout } from './components/ui/';
 import { productList } from './data/product_list';
 import { pagesList } from './data/pages_list';
+import Product from './pages/Product/Product';
 
 function App() {
 	return (
@@ -28,7 +29,8 @@ function App() {
 							<Route
 								key={index}
 								path={direction}
-								element={<ElementName />}
+								// element={<ElementName product={product} />}
+								element={<Product product={product} />}
 							/>
 						);
 					})}
