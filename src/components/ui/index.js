@@ -1,3 +1,4 @@
+import AddToCart from './AddToCart';
 import AsideNav from './AsideNav';
 import Cart from './Cart';
 import Categories from './Categories';
@@ -16,21 +17,22 @@ import SingleProductGallery from './SingleProductGallery';
 import SingleProductInfo from './SingleProductInfo';
 import Socials from './Socials';
 export {
-	SharedLayout,
-	Navbar,
-	Links,
-	Logo,
-	Footer,
-	Socials,
-	Hero,
-	Categories,
-	PreFooterInfo,
-	CategoryHeader,
-	ProductInfo,
-	SingleProductInfo,
-	SingleProductAbout,
-	SingleProductGallery,
-	Recommendations,
-	AsideNav,
-	Cart,
+  SharedLayout,
+  Navbar,
+  Links,
+  Logo,
+  Footer,
+  Socials,
+  Hero,
+  Categories,
+  PreFooterInfo,
+  CategoryHeader,
+  ProductInfo,
+  SingleProductInfo,
+  SingleProductAbout,
+  SingleProductGallery,
+  Recommendations,
+  AsideNav,
+  Cart,
+  AddToCart,
 };
