@@ -1,4 +1,4 @@
-import { ADD_TO_CART, CHANGE_CART_ITEM_AMOUNT } from './actions';
+import { ADD_TO_CART } from './actions';
 
 const reducer = (state, action) => {
   if (action.type === ADD_TO_CART) {
@@ -14,7 +14,6 @@ const reducer = (state, action) => {
           return { ...cartItem, amount: newAmount };
         } else return cartItem;
       });
-      console.log(tempCart);
       return { ...state, cart: tempCart };
     } else {
       const newItem = {
@@ -25,7 +24,6 @@ const reducer = (state, action) => {
         price: product.price,
         max: product.amountInStock,
       };
-      console.log(newItem);
       return { ...state, cart: [...state.cart, newItem] };
     }
   }

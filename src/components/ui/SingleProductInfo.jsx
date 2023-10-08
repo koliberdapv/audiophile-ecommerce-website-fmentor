@@ -19,13 +19,6 @@ const SingleProductInfo = ({ data, product }) => {
             {isNew && <p className="overline">new product</p>}
             <h1>{name}</h1>
             <p className="text">{description}</p>
-            {/* <button
-							onClick={() => {
-								addToCart({ id, amount: 1, product });
-							}}
-						>
-							add to cart
-						</button> */}
             <AddToCart product={product} />
           </section>
         </div>

@@ -5,7 +5,7 @@ const SharedLayout = () => {
   return (
     <>
       <Navbar />
-      <Cart />
+      {/* <Cart /> */}
       <AsideNav />
       <Outlet />
       <Footer />

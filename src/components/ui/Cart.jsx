@@ -3,7 +3,9 @@ import { cartItemsList } from '../../data/cartItemsList';
 import Wrapper from './Wrappers/CartWrapper';
 
 const Cart = () => {
-	return <div></div>;
+  const { cart } = useGlobalContext();
+  console.log(cart);
+  return <div>cart</div>;
 };
 
 export default Cart;

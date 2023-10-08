@@ -1,15 +1,34 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const Counter = ({ amount, setAmount }) => {
-  const changeAmount = () => {};
+const Counter = ({ amount, setAmount, max }) => {
+  const changeAmount = (e) => {
+    const action = e.currentTarget.dataset.action;
+    if (action === 'increase') {
+      if (amount > max) return;
+      setAmount((prev) => prev + 1);
+    }
+    if (action === 'decrease') {
+      if (amount <= 1) return;
+      setAmount((prev) => prev - 1);
+    }
+  };
   return (
     <Wrapper>
       <div className="counter | grid">
-        <button className="subtitle" onClick={changeAmount}>
+        <button
+          className="subtitle"
+          data-action="decrease"
+          onClick={changeAmount}
+        >
           -
         </button>
         <p className="subtitle">{amount}</p>
-        <button className="subtitle" onClick={changeAmount}>
+        <button
+          className="subtitle"
+          data-action="increase"
+          onClick={changeAmount}
+        >
           +
         </button>
       </div>
