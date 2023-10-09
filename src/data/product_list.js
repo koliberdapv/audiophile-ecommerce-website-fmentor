@@ -15,8 +15,8 @@ import zx9 from './products/zx9_speaker';
 
 export const productList = [
   {
-    id: nanoid(),
-    name: 'XX99-Mark-II',
+    id: 'v_aS0A9R_RHePiE1uM9_',
+    name: 'XX99 Mark II',
     direction: `/product/XX99-Mark-II`,
     image: xx99_mark_2_image,
     price: 2999,
@@ -24,8 +24,8 @@ export const productList = [
     info: mark2,
   },
   {
-    id: nanoid(),
-    name: 'XX99-Mark-I',
+    id: 'ky4C1NMi7u8ytkQH64CG9',
+    name: 'XX99 Mark I',
     direction: `/product/XX99-Mark-I`,
     image: xx99_mark_1_image,
     price: 1750,
@@ -33,7 +33,7 @@ export const productList = [
     info: mark1,
   },
   {
-    id: nanoid(),
+    id: 'T08B6mmWGg0_wW4dUtUA_',
     name: 'XX59',
     direction: `/product/XX59`,
     image: xx59_image,
@@ -42,7 +42,7 @@ export const productList = [
     info: xx59,
   },
   {
-    id: nanoid(),
+    id: 'qE0MbulsxFu6YsRSKXNo2',
     name: 'ZX9',
     direction: `/product/ZX9`,
     image: zx9_image,
@@ -51,7 +51,7 @@ export const productList = [
     info: zx9,
   },
   {
-    id: nanoid(),
+    id: 'G7KkFABKX17rqxE9qLVFn',
     name: 'ZX7',
     direction: `/product/ZX7`,
     image: zx7_image,
@@ -60,7 +60,7 @@ export const productList = [
     info: zx7,
   },
   {
-    id: nanoid(),
+    id: '4xpxJDwGAvUYeaME_56pS',
     name: 'YX1',
     direction: `/product/YX1`,
     image: yx1_image,

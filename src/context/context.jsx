@@ -11,8 +11,14 @@ import { CHANGE_CART_ITEM_AMOUNT, ADD_TO_CART } from './actions';
 
 const AppContext = createContext();
 
+const getLocalStorage = () => {
+  let cart = localStorage.getItem('cart');
+  if (cart) return JSON.parse(localStorage.getItem('cart'));
+  else return [];
+};
+
 const initialState = {
-  cart: [],
+  cart: getLocalStorage(),
   totalItems: 0,
   totalAmount: 0,
   shipping: 0,
@@ -31,7 +37,6 @@ export const AppProvider = ({ children }) => {
   };
 
   const toggleSidebarOpen = () => {
-    console.log('click');
     if (isSidebarOpen) {
       setIsSidebarOpen(false);
     }
@@ -53,7 +58,9 @@ export const AppProvider = ({ children }) => {
 
   const clearCart = () => {};
 
-  useEffect(() => {}, [state.cart]);
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(state.cart));
+  }, [state.cart]);
 
   return (
     <AppContext.Provider

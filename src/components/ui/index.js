@@ -1,6 +1,7 @@
 import AddToCart from './AddToCart';
 import AsideNav from './AsideNav';
 import Cart from './Cart';
+import CartItem from './CartItem';
 import Categories from './Categories';
 import CategoryHeader from './CategoryHeader';
 import Footer from './Footer';
@@ -35,4 +36,5 @@ export {
   AsideNav,
   Cart,
   AddToCart,
+  CartItem,
 };

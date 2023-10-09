@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { useGlobalContext } from '../../context/context';
+import { scrollToTop } from '../../utils';
 
 const ColorButton = ({ direction, isAddToCart, amount, product }) => {
   const { addToCart } = useGlobalContext();
@@ -19,7 +20,11 @@ const ColorButton = ({ direction, isAddToCart, amount, product }) => {
 
   return (
     <Wrapper>
-      <Link className="link | grid" to={direction}>
+      <Link
+        className="link | grid"
+        to={direction}
+        onClick={() => scrollToTop()}
+      >
         <p className="subtitle">see product</p>
       </Link>
     </Wrapper>
