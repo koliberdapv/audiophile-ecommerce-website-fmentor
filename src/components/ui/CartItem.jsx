@@ -1,7 +1,20 @@
+import { useGlobalContext } from '../../context/context';
 import { formatPrice } from '../../utils';
+import { Counter } from '../buttons';
 import Wrapper from './Wrappers/CartItemWrapper';
 const CartItem = ({ item }) => {
   const { image, price, name, amount, id, info } = item;
+  const { toggleAmount, removeItem } = useGlobalContext();
+  const increase = () => {
+    toggleAmount(id, 'increase');
+  };
+  const decrease = (amount) => {
+    if (amount === 1) {
+      removeItem(id);
+      return;
+    }
+    toggleAmount(id, 'decrease');
+  };
   return (
     <Wrapper>
       <div className="container | flex">
@@ -14,7 +27,13 @@ const CartItem = ({ item }) => {
             $ <span>{formatPrice(price)}</span>
           </div>
         </div>
-        <div className="amount | bold-opacity">x{amount}</div>
+        {/* <div className="amount | bold-opacity">x{amount}</div> */}
+        <Counter
+          increase={increase}
+          decrease={decrease}
+          amount={amount}
+          isCartCounter={true}
+        />
       </div>
     </Wrapper>
   );

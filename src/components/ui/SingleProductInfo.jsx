@@ -4,7 +4,6 @@ import Wrapper from './Wrappers/SingleProductInfoWrapper';
 
 const SingleProductInfo = ({ data, product }) => {
   const { images, name, description, isNew } = data;
-  const { id, price } = product;
   return (
     <Wrapper>
       <div className="width-controller">

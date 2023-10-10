@@ -4,7 +4,7 @@ import Wrapper from './Wrappers/CartWrapper';
 import { formatPrice } from '../../utils';
 
 const Cart = () => {
-  const { cart } = useGlobalContext();
+  const { cart, VAT, shipping, totalItems, totalAmount } = useGlobalContext();
   return (
     <Wrapper>
       <div className="width-controller">
@@ -19,25 +19,25 @@ const Cart = () => {
             <div className="fee-item | flex">
               <p className="fee-title">total</p>
               <div>
-                $ <span>{formatPrice(5396)}</span>
+                $ <span>{formatPrice(totalAmount)}</span>
               </div>
             </div>
             <div className="fee-item | flex">
               <p className="fee-title">shipping</p>
               <div>
-                $ <span>{formatPrice(50)}</span>
+                $ <span>{formatPrice(shipping)}</span>
               </div>
             </div>
             <div className="fee-item | flex">
               <p className="fee-title">vat (included)</p>
               <div>
-                $ <span>{formatPrice(1079)}</span>
+                $ <span>{formatPrice(VAT)}</span>
               </div>
             </div>
             <div className="fee-item | flex">
               <p className="fee-title">grand total</p>
               <div>
-                $ <span>{formatPrice(5446)}</span>
+                $ <span>{formatPrice(totalAmount + shipping)}</span>
               </div>
             </div>
           </section>

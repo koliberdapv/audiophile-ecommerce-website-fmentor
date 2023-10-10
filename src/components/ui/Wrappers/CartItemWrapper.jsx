@@ -3,6 +3,7 @@ const Wrapper = styled.li`
   .container {
     justify-content: space-between;
     gap: 1rem;
+    align-items: center;
   }
   .info {
     margin-right: auto;
