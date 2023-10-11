@@ -4,7 +4,7 @@ import Wrapper from './Wrappers/NavbarWrapper';
 import { Links, Logo } from './';
 import { useGlobalContext } from '../../context/context';
 const Navbar = () => {
-  const { toggleSidebarOpen } = useGlobalContext();
+  const { toggleSidebarOpen, toggleCartOpen } = useGlobalContext();
   return (
     <Wrapper>
       <div className="width-controller">
@@ -16,7 +16,7 @@ const Navbar = () => {
           </button>
           <Logo />
           <Links mobile={true} />
-          <button className="cart-btn">
+          <button className="cart-btn" onClick={toggleCartOpen}>
             <figure className="grid center">
               <img src={cart} alt="cart" />
             </figure>

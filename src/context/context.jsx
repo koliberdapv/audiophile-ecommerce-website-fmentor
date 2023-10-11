@@ -9,6 +9,7 @@ import reducer from './reducer';
 import {
   ADD_TO_CART,
   CLEAR_CART,
+  COUNT_CART_TOTALS,
   REMOVE_ITEM,
   TOGGLE_CART_ITEM_AMOUNT,
 } from './actions';
@@ -52,6 +53,15 @@ export const AppProvider = ({ children }) => {
     }
   };
 
+  const toggleCartOpen = () => {
+    if (isCartOpen) {
+      setIsCartOpen(false);
+    }
+    if (!isCartOpen) {
+      setIsCartOpen(true);
+    }
+  };
+
   const addToCart = ({ id, amount, product }) => {
     dispatch({ type: ADD_TO_CART, payload: { id, amount, product } });
   };
@@ -61,7 +71,6 @@ export const AppProvider = ({ children }) => {
   };
 
   const toggleAmount = (id, value) => {
-    console.log(id, value);
     dispatch({ type: TOGGLE_CART_ITEM_AMOUNT, payload: { id, value } });
   };
 
@@ -70,6 +79,7 @@ export const AppProvider = ({ children }) => {
   };
 
   useEffect(() => {
+    dispatch({ type: COUNT_CART_TOTALS });
     localStorage.setItem('cart', JSON.stringify(state.cart));
   }, [state.cart]);
 
@@ -78,7 +88,10 @@ export const AppProvider = ({ children }) => {
       value={{
         ...state,
         isCartOpen,
+        setIsCartOpen,
+        toggleCartOpen,
         isSidebarOpen,
+        setIsSidebarOpen,
         adjustShadowHeight,
         toggleSidebarOpen,
         addToCart,

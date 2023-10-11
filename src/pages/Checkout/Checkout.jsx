@@ -5,7 +5,7 @@ import Wrapper from './Wrapper/CheckoutWrapper';
 const Checkout = () => {
   return (
     <Wrapper>
-      <Cart />
+      <Cart isCheckoutPage={true} />
     </Wrapper>
   );
 };

@@ -9,8 +9,11 @@ const Wrapper = styled.section`
   .fee-info {
     gap: 0.5rem;
   }
-  .fee-item:last-child {
+  .grand-total {
     margin-top: 1rem;
+  }
+  .grand-total div {
+    color: var(--clr-dark-orange);
   }
   .fee-item {
     align-items: center;
@@ -35,6 +38,10 @@ const Wrapper = styled.section`
   }
   .items-list {
     gap: 1.5rem;
+  }
+
+  .clear-cart-btn {
+    background-color: transparent;
   }
 `;
 export default Wrapper;

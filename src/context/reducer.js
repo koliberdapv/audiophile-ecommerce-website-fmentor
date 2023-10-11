@@ -1,6 +1,7 @@
 import {
   ADD_TO_CART,
   CLEAR_CART,
+  COUNT_CART_TOTALS,
   REMOVE_ITEM,
   TOGGLE_CART_ITEM_AMOUNT,
 } from './actions';
@@ -34,7 +35,6 @@ const reducer = (state, action) => {
   }
 
   if (action.type === REMOVE_ITEM) {
-    console.log('remove item started');
     const tempCart = state.cart.filter((item) => item.id !== action.payload.id);
     return { ...state, cart: tempCart };
   }
@@ -66,6 +66,23 @@ const reducer = (state, action) => {
       }
     });
     return { ...state, cart: tempCart };
+  }
+
+  if (action.type === COUNT_CART_TOTALS) {
+    const { totalItems, totalAmount } = state.cart.reduce(
+      (total, cartItem) => {
+        const { amount, price } = cartItem;
+        total.totalItems += amount;
+        total.totalAmount += price * amount;
+        return total;
+      },
+      {
+        totalItems: 0,
+        totalAmount: 0,
+      }
+    );
+    const tempVAT = (totalAmount * 20) / 100;
+    return { ...state, totalAmount, totalItems, VAT: tempVAT };
   }
 
   throw new Error(`no matching action type : ${action.type}`);
