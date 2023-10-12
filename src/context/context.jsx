@@ -54,11 +54,28 @@ export const AppProvider = ({ children }) => {
   };
 
   const toggleCartOpen = () => {
+    const cartModal = document.querySelector('.cart-modal');
     if (isCartOpen) {
       setIsCartOpen(false);
+      cartModal.close();
     }
     if (!isCartOpen) {
       setIsCartOpen(true);
+      cartModal.showModal();
+    }
+  };
+
+  const clickOutsideModal = (e) => {
+    const cartModal = document.querySelector('.cart-modal');
+    const dialogDimensions = cartModal.getBoundingClientRect();
+    if (
+      e.clientX < dialogDimensions.left ||
+      e.clientX > dialogDimensions.right ||
+      e.clientY < dialogDimensions.top ||
+      e.clientY > dialogDimensions.bottom
+    ) {
+      setIsCartOpen(false);
+      cartModal.close();
     }
   };
 
@@ -98,6 +115,7 @@ export const AppProvider = ({ children }) => {
         toggleAmount,
         removeItem,
         clearCart,
+        clickOutsideModal,
       }}
     >
       {children}

@@ -262,9 +262,37 @@ img {
 .aside-open {
   transform: translateX(0) !important;
   opacity: 1 !important;
-  /* transition: transform 250ms ease-out, opacity 250ms ease-out !important; */
   transition: transform 250ms ease-out, opacity 400ms ease-out !important;
 }
 .aside-open .sidebar-shadow {
   opacity: 0.4 !important;
+}
+.cart-modal {
+  z-index: 2;
+  border: none;
+  position: absolute;
+  top: 109px;
+  right: 0;
+  background-color: white;
+  max-width: 1100px;
+  margin-inline: auto;
+  width: calc(100% - 3rem);
+
+  border-radius: var(--br-form);
+}
+
+.cart-modal::backdrop {
+  background-color: hsl(0, 0%, 0%, 0.4);
+}
+dialog:-internal-dialog-in-top-layer {
+  max-width: unset;
+}
+@media screen and (width > 600px) {
+  .cart-modal {
+    margin-inline: unset;
+    max-width: unset;
+    width: 377px;
+    margin-left: auto;
+    margin-right: 2.4375rem;
+  }
 }

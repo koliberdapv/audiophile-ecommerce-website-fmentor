@@ -3,11 +3,13 @@ import { Navbar, Footer, AsideNav, Cart } from '.';
 import { useGlobalContext } from '../../context/context';
 
 const SharedLayout = () => {
-  const { isCartOpen } = useGlobalContext();
+  const { isCartOpen, clickOutsideModal } = useGlobalContext();
   return (
     <>
       <Navbar />
-      {isCartOpen && <Cart isGlobalModule={true} />}
+      <dialog className="cart-modal" onClick={(e) => clickOutsideModal(e)}>
+        <Cart isGlobalModule={true} />
+      </dialog>
       <AsideNav />
       <Outlet />
       <Footer />

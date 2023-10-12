@@ -15,9 +15,27 @@ const Cart = ({ isCheckoutPage, isGlobalModule }) => {
     toggleCartOpen,
   } = useGlobalContext();
 
+  if (cart.length < 1) {
+    return (
+      <Wrapper>
+        <div className="width-controller ">
+          <div className="content-container | grid">
+            <header className="empty-cart | grid">
+              <h6>Your cart is empty</h6>
+              <p>Let's fill it in!</p>
+              <Link className="cart-btn | grid" to="/" onClick={toggleCartOpen}>
+                <p className="subtitle">see our products</p>
+              </Link>
+            </header>
+          </div>
+        </div>
+      </Wrapper>
+    );
+  }
+
   return (
-    <Wrapper>
-      <div className="width-controller">
+    <Wrapper className="cart-modal-wrapper">
+      <div className={isCheckoutPage ? 'width-controller' : ''}>
         <div className="content-container | grid">
           {isCheckoutPage && <h6 className="title">summary</h6>}
           {isGlobalModule && (

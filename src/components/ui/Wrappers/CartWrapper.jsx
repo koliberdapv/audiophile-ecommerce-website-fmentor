@@ -43,5 +43,19 @@ const Wrapper = styled.section`
   .clear-cart-btn {
     background-color: transparent;
   }
+  .empty-cart {
+    gap: 2rem;
+    place-content: center;
+    text-align: center;
+  }
+  @media screen and (width > 600px) {
+    .width-controller {
+      margin-inline: unset;
+      max-width: unset;
+      width: 377px;
+      margin-left: auto;
+      margin-right: 2.4375rem;
+    }
+  }
 `;
 export default Wrapper;
