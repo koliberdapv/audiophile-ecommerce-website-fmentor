@@ -57,5 +57,23 @@ const Wrapper = styled.header`
 			margin-left: -7rem;
 		}
 	}
+	.cart-btn {
+		position: relative;
+	}
+	.cart-btn-count {
+		position: absolute;
+		top: -25%;
+		right: -25%;
+		background-color: var(--clr-dark-orange);
+		color: white;
+		width: 1.5rem;
+		width: 1.25rem;
+		aspect-ratio: 1/1;
+		border-radius: 50%;
+		display: grid;
+		place-items: center;
+		font-size: var(--fs-300);
+		font-weight: var(--fw-700);
+	}
 `;
 export default Wrapper;

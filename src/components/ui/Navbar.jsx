@@ -4,27 +4,43 @@ import Wrapper from './Wrappers/NavbarWrapper';
 import { Links, Logo } from './';
 import { useGlobalContext } from '../../context/context';
 const Navbar = () => {
-  const { toggleSidebarOpen, toggleCartOpen } = useGlobalContext();
-  return (
-    <Wrapper>
-      <div className="width-controller">
-        <nav className="nav-container | flex align-center justify-space">
-          <button className="menu-btn" onClick={toggleSidebarOpen}>
-            <figure className="grid center">
-              <img src={hamburger} alt="menu" />
-            </figure>
-          </button>
-          <Logo />
-          <Links mobile={true} />
-          <button className="cart-btn" onClick={toggleCartOpen}>
-            <figure className="grid center">
-              <img src={cart} alt="cart" />
-            </figure>
-          </button>
-        </nav>
-      </div>
-    </Wrapper>
-  );
+	const { toggleSidebarOpen, toggleCartOpen, numberOfItems } =
+		useGlobalContext();
+	return (
+		<Wrapper>
+			<div className="width-controller">
+				<nav className="nav-container | flex align-center justify-space">
+					<button
+						className="menu-btn"
+						onClick={toggleSidebarOpen}
+					>
+						<figure className="grid center">
+							<img
+								src={hamburger}
+								alt="menu"
+							/>
+						</figure>
+					</button>
+					<Logo />
+					<Links mobile={true} />
+					<button
+						className="cart-btn"
+						onClick={toggleCartOpen}
+					>
+						{numberOfItems > 0 && (
+							<span className="cart-btn-count">{numberOfItems}</span>
+						)}
+						<figure className="grid center">
+							<img
+								src={cart}
+								alt="cart"
+							/>
+						</figure>
+					</button>
+				</nav>
+			</div>
+		</Wrapper>
+	);
 };
 
 export default Navbar;
