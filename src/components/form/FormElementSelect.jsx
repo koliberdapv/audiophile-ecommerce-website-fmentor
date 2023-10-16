@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-const FormElementSelect = () => {
+const FormElementSelect = ({ label, list, selectOption, selectOption2 }) => {
 	const handleClick = (e) => {
 		const btn = e.currentTarget.closest('.select-btn');
 		const dot = btn.querySelector('.inner-circle');
@@ -8,23 +8,40 @@ const FormElementSelect = () => {
 	};
 	return (
 		<Wrapper>
+			<label>{label}</label>
 			<button
 				className="select-btn flex align-center"
 				onClick={handleClick}
+				type="button"
 			>
 				<div className="outer-circle grid center">
 					<div className="inner-circle hidden"></div>
 				</div>
-				<label>e-Money</label>
+				<p>{selectOption}</p>
+			</button>
+			<button
+				className="select-btn flex align-center"
+				onClick={handleClick}
+				type="button"
+			>
+				<div className="outer-circle grid center">
+					<div className="inner-circle hidden"></div>
+				</div>
+				<p>{selectOption2}</p>
 			</button>
 		</Wrapper>
 	);
 };
 
 const Wrapper = styled.div`
-	width: 19.5rem;
+	label {
+		font-size: var(--fs-100);
+		text-transform: capitalize;
+		font-weight: var(--fw-700);
+	}
 	.select-btn {
-		padding: 1.125rem 1.5rem;
+		margin-top: 1rem;
+		padding: 0.9rem 1.5rem;
 		width: 100%;
 		border-radius: var(--br-form);
 		border: 1px solid hsl(0, 0%, 81.17%);
@@ -50,6 +67,15 @@ const Wrapper = styled.div`
 		height: 10px;
 		border-radius: 50%;
 		background-color: var(--clr-dark-orange);
+	}
+	p {
+		font-weight: var(--fw-700);
+	}
+	@media screen and (width > 600px) {
+		.select-btn {
+			max-width: 49%;
+			margin-left: auto;
+		}
 	}
 `;
 

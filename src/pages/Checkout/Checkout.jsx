@@ -1,4 +1,4 @@
-import { Cart } from '../../components/ui';
+import { Cart, CheckoutForm } from '../../components/ui';
 import Wrapper from './Wrapper/CheckoutWrapper';
 import { BackButton } from '../../components/buttons';
 
@@ -6,8 +6,9 @@ const Checkout = () => {
 	return (
 		<Wrapper>
 			<div className="width-controller">
-				<div className="content-container">
-					<BackButton />
+				<BackButton />
+				<div className="content-container | grid global-container">
+					<CheckoutForm />
 					<Cart isCheckoutPage={true} />
 				</div>
 			</div>

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-const FormElement = () => {
+const FormElement = ({ label, value, placeholder }) => {
 	return (
 		<Wrapper>
 			<div className="flex align-center justify-space">
@@ -8,13 +8,13 @@ const FormElement = () => {
 					id=""
 					className=""
 				>
-					Name
+					{label}
 				</label>
 				<p className="error hidden">Wrong format</p>
 			</div>
 			<input
 				type="text"
-				placeholder="Insert your name"
+				placeholder={placeholder}
 				className=""
 			/>
 		</Wrapper>
@@ -22,9 +22,11 @@ const FormElement = () => {
 };
 
 const Wrapper = styled.div`
-	width: 19.5rem;
 	label {
 		font-size: var(--fs-100);
+		text-transform: capitalize;
+		margin-bottom: 0.5rem;
+		font-weight: var(--fw-700);
 	}
 	.error {
 		font-size: var(--fs-100);

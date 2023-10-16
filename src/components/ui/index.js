@@ -4,6 +4,7 @@ import Cart from './Cart';
 import CartItem from './CartItem';
 import Categories from './Categories';
 import CategoryHeader from './CategoryHeader';
+import CheckoutForm from './CheckoutForm';
 import Footer from './Footer';
 import Hero from './Hero';
 import Links from './Links';
@@ -18,23 +19,24 @@ import SingleProductGallery from './SingleProductGallery';
 import SingleProductInfo from './SingleProductInfo';
 import Socials from './Socials';
 export {
-  SharedLayout,
-  Navbar,
-  Links,
-  Logo,
-  Footer,
-  Socials,
-  Hero,
-  Categories,
-  PreFooterInfo,
-  CategoryHeader,
-  ProductInfo,
-  SingleProductInfo,
-  SingleProductAbout,
-  SingleProductGallery,
-  Recommendations,
-  AsideNav,
-  Cart,
-  AddToCart,
-  CartItem,
+	SharedLayout,
+	Navbar,
+	Links,
+	Logo,
+	Footer,
+	Socials,
+	Hero,
+	Categories,
+	PreFooterInfo,
+	CategoryHeader,
+	ProductInfo,
+	SingleProductInfo,
+	SingleProductAbout,
+	SingleProductGallery,
+	Recommendations,
+	AsideNav,
+	Cart,
+	AddToCart,
+	CartItem,
+	CheckoutForm,
 };

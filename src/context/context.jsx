@@ -101,6 +101,7 @@ export const AppProvider = ({ children }) => {
 		toast.success('All items removed!', {
 			position: toast.POSITION.TOP_CENTER,
 		});
+		toggleCartOpen();
 	};
 
 	useEffect(() => {

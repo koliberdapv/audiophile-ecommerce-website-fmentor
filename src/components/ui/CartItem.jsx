@@ -5,7 +5,7 @@ import { Counter } from '../buttons';
 import Wrapper from './Wrappers/CartItemWrapper';
 const CartItem = ({ item, isCheckoutPage, isGlobalModule }) => {
 	const { image, price, name, amount, id, info } = item;
-	const { toggleAmount, removeItem } = useGlobalContext();
+	const { toggleAmount, removeItem, toggleCartOpen } = useGlobalContext();
 	const increase = () => {
 		toggleAmount(id, 'increase');
 	};
@@ -13,6 +13,7 @@ const CartItem = ({ item, isCheckoutPage, isGlobalModule }) => {
 		if (amount === 1) {
 			removeItem(id);
 			toast.success('Item removed!', { position: toast.POSITION.TOP_CENTER });
+			toggleCartOpen();
 			return;
 		}
 		toggleAmount(id, 'decrease');
