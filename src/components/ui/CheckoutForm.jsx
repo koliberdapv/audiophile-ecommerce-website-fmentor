@@ -1,8 +1,34 @@
+import { useSearchParams } from 'react-router-dom';
 import FormElement from '../form/FormElement';
 import FormElementSelect from '../form/FormElementSelect';
 import Wrapper from './Wrappers/CheckoutFormWrapper';
 
 const CheckoutForm = () => {
+	const [searchParams, setSearchParams] = useSearchParams({
+		// name: '',
+		// email: '',
+		// phone: '',
+		// address: '',
+		// zip: '',
+		// city: '',
+		// country: '',
+	});
+	const userName = searchParams.get('name') || '';
+	const email = searchParams.get('email') || '';
+	const phoneNumber = searchParams.get('phone') || '';
+	const address = searchParams.get('address') || '';
+	const zip = searchParams.get('zip') || '';
+	const city = searchParams.get('city') || '';
+	const country = searchParams.get('country') || '';
+
+	const changeValue = (e, searchValue) =>
+		setSearchParams(
+			(prev) => {
+				prev.set(searchValue, e.target.value);
+				return prev;
+			},
+			{ replace: true }
+		);
 	return (
 		<Wrapper>
 			<div className="content-container">
@@ -15,14 +41,23 @@ const CheckoutForm = () => {
 						<FormElement
 							label="name"
 							placeholder="Alexei Ward"
+							searchValue="name"
+							inputValue={userName}
+							changeValue={changeValue}
 						/>
 						<FormElement
 							label="email address"
 							placeholder="alexei@mail.com"
+							searchValue="email"
+							inputValue={email}
+							changeValue={changeValue}
 						/>
 						<FormElement
 							label="phone number"
 							placeholder="+1 202-555-0136"
+							searchValue="phone"
+							inputValue={phoneNumber}
+							changeValue={changeValue}
 						/>
 					</section>
 					<section className="form-section | grid">
@@ -30,19 +65,31 @@ const CheckoutForm = () => {
 						<FormElement
 							label="your address"
 							placeholder="1137 Williams Avenue"
+							searchValue="address"
+							inputValue={address}
+							changeValue={changeValue}
 						/>
 						<div className="sub-section | grid">
 							<FormElement
 								label="zip code"
 								placeholder="10001"
+								searchValue="zip"
+								inputValue={zip}
+								changeValue={changeValue}
 							/>
 							<FormElement
 								label="city"
 								placeholder="New York"
+								searchValue="city"
+								inputValue={city}
+								changeValue={changeValue}
 							/>
 							<FormElement
 								label="country"
 								placeholder="United States"
+								searchValue="country"
+								inputValue={country}
+								changeValue={changeValue}
 							/>
 						</div>
 					</section>

@@ -1,5 +1,11 @@
 import styled from 'styled-components';
-const FormElement = ({ label, value, placeholder }) => {
+const FormElement = ({
+	label,
+	placeholder,
+	searchValue,
+	inputValue,
+	changeValue,
+}) => {
 	return (
 		<Wrapper>
 			<div className="flex align-center justify-space">
@@ -16,6 +22,8 @@ const FormElement = ({ label, value, placeholder }) => {
 				type="text"
 				placeholder={placeholder}
 				className=""
+				value={inputValue}
+				onChange={(e) => changeValue(e, searchValue)}
 			/>
 		</Wrapper>
 	);
