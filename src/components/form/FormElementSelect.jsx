@@ -1,5 +1,13 @@
 import styled from 'styled-components';
-const FormElementSelect = ({ label, list, selectOption, selectOption2 }) => {
+import FormElementSelectOption from './FormElementSelectOption';
+const FormElementSelect = ({
+	label,
+	list,
+	selectOption,
+	selectOption2,
+	changeValue,
+	handlePaymentOptionsClick,
+}) => {
 	const handleClick = (e) => {
 		const btn = e.currentTarget.closest('.select-btn');
 		const dot = btn.querySelector('.inner-circle');
@@ -9,31 +17,25 @@ const FormElementSelect = ({ label, list, selectOption, selectOption2 }) => {
 	return (
 		<Wrapper>
 			<label>{label}</label>
-			<button
-				className="select-btn flex align-center"
-				onClick={handleClick}
-				type="button"
-			>
-				<div className="outer-circle grid center">
-					<div className="inner-circle hidden"></div>
-				</div>
-				<p>{selectOption}</p>
-			</button>
-			<button
-				className="select-btn flex align-center"
-				onClick={handleClick}
-				type="button"
-			>
-				<div className="outer-circle grid center">
-					<div className="inner-circle hidden"></div>
-				</div>
-				<p>{selectOption2}</p>
-			</button>
+			{list.map((item) => {
+				return (
+					<FormElementSelectOption
+						key={item.id}
+						item={item.item}
+						value={item.value}
+						name={item.name}
+						changeValue={changeValue}
+						handleClick={handleClick}
+						handlePaymentOptionsClick={handlePaymentOptionsClick}
+					/>
+				);
+			})}
 		</Wrapper>
 	);
 };
 
 const Wrapper = styled.div`
+	display: grid;
 	label {
 		font-size: var(--fs-100);
 		text-transform: capitalize;

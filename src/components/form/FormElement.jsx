@@ -21,7 +21,7 @@ const FormElement = ({
 			<input
 				type="text"
 				placeholder={placeholder}
-				className=""
+				className={searchValue === 'email' ? 'email' : ''}
 				value={inputValue}
 				onChange={(e) => changeValue(e, searchValue)}
 			/>
@@ -47,6 +47,7 @@ const Wrapper = styled.div`
 		border: 1px solid var(--clr-form-border);
 		font-size: var(--fs-300);
 		font-weight: var(--fw-600);
+		text-transform: capitalize;
 	}
 	input:focus {
 		border: 1px solid var(--clr-dark-orange);
@@ -55,6 +56,9 @@ const Wrapper = styled.div`
 	input::placeholder {
 		font-size: var(--fs-300);
 		font-weight: var(--fw-500);
+	}
+	.email {
+		text-transform: unset;
 	}
 	.invalid {
 		border: 2px solid var(--clr-invalid);

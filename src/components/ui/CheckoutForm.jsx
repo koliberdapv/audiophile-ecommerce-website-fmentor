@@ -4,15 +4,7 @@ import FormElementSelect from '../form/FormElementSelect';
 import Wrapper from './Wrappers/CheckoutFormWrapper';
 
 const CheckoutForm = () => {
-	const [searchParams, setSearchParams] = useSearchParams({
-		// name: '',
-		// email: '',
-		// phone: '',
-		// address: '',
-		// zip: '',
-		// city: '',
-		// country: '',
-	});
+	const [searchParams, setSearchParams] = useSearchParams({});
 	const userName = searchParams.get('name') || '';
 	const email = searchParams.get('email') || '';
 	const phoneNumber = searchParams.get('phone') || '';
@@ -20,6 +12,23 @@ const CheckoutForm = () => {
 	const zip = searchParams.get('zip') || '';
 	const city = searchParams.get('city') || '';
 	const country = searchParams.get('country') || '';
+	const eMoney = searchParams.get('eMoney') === 'true';
+	const cash = searchParams.get('cash') === 'true';
+
+	const selectOptionsList = [
+		{
+			id: 1,
+			name: 'e-Money',
+			item: 'eMoney',
+			value: eMoney,
+		},
+		{
+			id: 2,
+			name: 'Cash on Delivery',
+			item: 'cash',
+			value: cash,
+		},
+	];
 
 	const changeValue = (e, searchValue) =>
 		setSearchParams(
@@ -29,6 +38,18 @@ const CheckoutForm = () => {
 			},
 			{ replace: true }
 		);
+
+	const handlePaymentOptionsClick = (e) => {
+		const button = e.target.closest('button');
+		setSearchParams(
+			(prev) => {
+				prev.set(button.id, 'true');
+				return prev;
+			},
+			{ replace: true }
+		);
+		console.log(selectOptionsList);
+	};
 	return (
 		<Wrapper>
 			<div className="content-container">
@@ -98,8 +119,9 @@ const CheckoutForm = () => {
 						<FormElementSelect
 							label="payment method"
 							placeholder="1137 Williams Avenue"
-							selectOption="e-Money"
-							selectOption2="Cash on Delivery"
+							changeValue={changeValue}
+							list={selectOptionsList}
+							handlePaymentOptionsClick={handlePaymentOptionsClick}
 						/>
 						<div className="sub-section | grid">
 							<FormElement
